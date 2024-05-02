@@ -355,24 +355,28 @@
                 <h2>
                   Request A Call Back
                 </h2>
-                <form action="">
-                  <div>
-                    <input type="text" placeholder="Name" />
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Phone Number" />
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email" />
-                  </div>
-                  <div>
-                    <input type="text" class="message-box" placeholder="Message" />
-                  </div>
-                  <div class="d-flex ">
-                    <button><a href="mailto:support@adtimtech.com"> SEND</a>
-                    </button>
-                  </div>
-                </form>
+                <form action="PHP/submit_feedback.php" method="post">
+    <div>
+        <label for="name"></label>
+        <input type="text" placeholder="Name" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="phone"></label>
+        <input type="text" placeholder="Phone Number" id="phone" name="phone">
+    </div>
+    <div>
+        <label for="email"></label>
+        <input type="email" placeholder="Email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="message"></label>
+        
+		<input type="text" class="message-box" placeholder="Message" id="message" name="message" required />
+    </div>
+    <div class="d-flex">
+        <button type="submit">SEND</button>
+    </div>
+</form>
                 <div id="map"></div>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=INSERT_YOUR_API_KEY&callback=initMap&v=weekly&solution_channel=GMP_CCS_customcontrols_v1"
