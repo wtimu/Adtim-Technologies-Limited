@@ -3,33 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Adtim Technologies - IT solutions, network infrastructure, CCTV systems, access control, and more.">
-    <title>Adtim Technologies | Leading IT Solutions</title>
+    <meta name="description" content="Adtim Technologies - Your reliable IT partner in network infrastructure, CCTV, and access control solutions.">
+    <title>Adtim Technologies | IT Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <h1>Adtim Technologies</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#"><img src="logo.png" alt="Adtim Technologies Logo"></a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <section id="home" class="hero-section">
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h2>Innovative IT Solutions for Your Business</h2>
-            <p>We provide cutting-edge network infrastructure, security systems, and IT consulting.</p>
-            <a href="#contact" class="cta-button">Request a Quote</a>
+            <h1>Leading IT Solutions for Every Business</h1>
+            <p>We provide tailored IT solutions to improve your business operations and security.</p>
+            <a href="#contact" class="btn-primary">Request a Quote</a>
         </div>
     </section>
 
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <p>Adtim Technologies is a leading IT service provider specializing in delivering solutions that transform your IT infrastructure. From network security to structured cabling,
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Adtim Technologies</h2>
+            <p>Adtim Technologies is a leading provider of innovative IT solutions, focusing on networking, security, and IT consulting services for businesses of all sizes.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Structured Cabling & LAN</h3>
+                    <p>Efficient network cabling for high-speed data transfer and reliable connectivity.</p>
+                </div>
+                <div class="service-item">
+                    <h3>CCTV & Security Systems</h3>
+                    <p>Advanced surveillance systems to keep your business secure 24/7.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Access Control Solutions</h3>
+                    <p>Control and monitor access to your facilities with robust systems.</p>
+                </div>
+                <div class="service-item">
+                    <h3>IT Consulting</h3>
+                    <p>Expert advice to align your IT infrastructure with business goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Adtim Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
