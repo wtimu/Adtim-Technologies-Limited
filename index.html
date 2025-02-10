@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adtim Technologies - Modern Design</title>
+  <title>Adtim Technologies - About</title>
   <link rel="icon" type="image/x-icon" href="Adtim/images/icons/fav.ico" />
 
   <!-- Bootstrap CSS -->
@@ -21,6 +21,8 @@
       font-family: 'Poppins', sans-serif;
       background-color: #f8f9fa;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
     a {
       text-decoration: none;
@@ -34,16 +36,25 @@
       background: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    .navbar-brand h1 {
-      font-weight: 700;
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    .navbar-brand .brand-text h1 {
+      margin: 0;
       font-size: 36px;
       color: #E12125;
-      margin: 0;
+      line-height: 1;
     }
-    .navbar-brand h2 {
-      font-weight: 600;
-      color: #333;
+    .navbar-brand .brand-text h2 {
       margin: 0;
+      font-size: 16px;
+      color: #333;
+      line-height: 1;
     }
     .top-nav-info ul {
       list-style: none;
@@ -57,29 +68,27 @@
       align-items: center;
     }
     .top-nav-info ul li img {
-      margin-right: 5px;
       width: 20px;
+      margin-right: 5px;
+    }
+    .top-nav-info ul li a {
+      color: #333;
     }
 
     /* Hero Slider */
     .slider_section {
       position: relative;
-      background: url('Adtim/images/slider-bg.jpg') no-repeat center center/cover;
+      background-color: #fff;
       min-height: 500px;
-      color: #fff;
+      padding: 60px 0;
+      color: #333;
     }
-    .carousel-inner .carousel-item {
-      min-height: 500px;
-      display: flex;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.4);
-    }
-    .carousel-caption h1 {
-      font-size: 48px;
+    .slider_section .detail-box h1 {
+      color: #E12125;
+      font-size: 36px;
       font-weight: 700;
-      margin-bottom: 20px;
     }
-    .btn-1 {
+    .slider_section .btn-1 {
       background: #E12125;
       color: #fff;
       padding: 10px 20px;
@@ -88,9 +97,8 @@
       letter-spacing: 1px;
       transition: background 0.3s;
     }
-    .btn-1:hover {
+    .slider_section .btn-1:hover {
       background: #c11b1f;
-      color: #fff;
     }
 
     /* About Section */
@@ -202,13 +210,10 @@
 
     /* Responsive Adjustments */
     @media (max-width: 768px) {
-      .carousel-caption h1 {
+      .slider_section .detail-box h1 {
         font-size: 32px;
       }
       .slider_section {
-        min-height: 400px;
-      }
-      .carousel-inner .carousel-item {
         min-height: 400px;
       }
     }
@@ -220,24 +225,27 @@
     <div class="container">
       <div class="d-flex justify-content-between align-items-center py-2">
         <a class="navbar-brand" href="Adtim/index.html">
-          <h1>ADTIM</h1>
-          <h2>TECHNOLOGIES</h2>
+          <img src="Adtim/images/Logo Small.png" alt="Adtim Technologies Logo">
+          <div class="brand-text">
+            <h1>ADTIM</h1>
+            <h2>TECHNOLOGIES</h2>
+          </div>
         </a>
         <div class="top-nav-info d-none d-md-block">
-          <ul class="mb-0">
-            <li>
+          <ul class="d-flex mb-0 list-unstyled">
+            <li class="mr-3">
               <a href="tel:+256704251030">
-                <img src="Adtim/images/telephone.png" alt="Call"> +256 704 251030
+                <img src="Adtim/images/telephone.png" alt="Call">+256 704 251030
               </a>
             </li>
-            <li>
+            <li class="mr-3">
               <a href="mailto:support@adtimtech.com">
-                <img src="Adtim/images/mail.png" alt="Email"> support@adtimtech.com
+                <img src="Adtim/images/mail.png" alt="Email">support@adtimtech.com
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="Adtim/images/location.png" alt="Location"> Kampala-Uganda
+                <img src="Adtim/images/location.png" alt="Location">Kampala-Uganda
               </a>
             </li>
           </ul>
@@ -278,28 +286,28 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="container text-center">
-            <div class="carousel-caption">
-              <h1>Structured Cabling & LAN</h1>
+            <div class="detail-box">
+              <h1>Structured Cabling &amp; LAN</h1>
               <p>Innovative solutions for modern infrastructure.</p>
-              <a href="Adtim/contact.html" class="btn btn-1">Contact Us</a>
+              <a href="Adtim/contact.html" class="btn-1">Contact Us</a>
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="container text-center">
-            <div class="carousel-caption">
-              <h1>CCTV & Security Systems</h1>
+            <div class="detail-box">
+              <h1>CCTV &amp; Security Systems</h1>
               <p>Advanced security for your business.</p>
-              <a href="Adtim/contact.html" class="btn btn-1">Contact Us</a>
+              <a href="Adtim/contact.html" class="btn-1">Contact Us</a>
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="container text-center">
-            <div class="carousel-caption">
-              <h1>Telecom & ISP Solutions</h1>
+            <div class="detail-box">
+              <h1>Telecom &amp; ISP Solutions</h1>
               <p>Empowering connectivity and communication.</p>
-              <a href="Adtim/contact.html" class="btn btn-1">Contact Us</a>
+              <a href="Adtim/contact.html" class="btn-1">Contact Us</a>
             </div>
           </div>
         </div>
@@ -322,7 +330,7 @@
           <p>
             We are a leading IT company specializing in delivering innovative solutions for businesses of all sizes. Our dedicated team transforms IT infrastructure and processes to drive efficiency, productivity, and growth.
           </p>
-          <a href="Adtim/about.html" class="btn btn-1">Read More</a>
+          <a href="Adtim/about.html" class="btn btn-outline-danger">Read More</a>
         </div>
         <div class="col-md-6">
           <img src="Adtim/images/about-image.jpg" alt="About Us" class="img-fluid rounded">
@@ -355,7 +363,7 @@
               <img src="Adtim/images/Services-02.png" alt="Access Control Systems">
             </div>
             <div class="detail-box">
-              <h2>Enterprise & Domestic Access Control</h2>
+              <h2>Enterprise &amp; Domestic Access Control</h2>
             </div>
           </div>
         </div>
@@ -375,7 +383,7 @@
               <img src="Adtim/images/Services-04.png" alt="Structured Cabling">
             </div>
             <div class="detail-box">
-              <h2>Structured Cabling & LAN</h2>
+              <h2>Structured Cabling &amp; LAN</h2>
             </div>
           </div>
         </div>
@@ -404,7 +412,7 @@
             <div class="form-group">
               <textarea class="form-control" placeholder="Message" id="message" name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-1 btn-block">SEND</button>
+            <button type="submit" class="btn btn-danger btn-block">SEND</button>
           </form>
         </div>
         <div class="col-md-6">
@@ -486,6 +494,6 @@
 
   <!-- Elfsight Widget Script -->
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-556f28ca-a28f-4ebd-b310-bc6106f0b497" data-elfsight-app-lazy></div>
+  <div class="elfsight-app-556f28ca-a28f-4ebd-bc6106f0b497" data-elfsight-app-lazy></div>
 </body>
 </html>
