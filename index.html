@@ -30,6 +30,10 @@
     a {
       text-decoration: none;
       color: inherit;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #FFC300;
     }
     h1, h2, h3 {
       font-family: 'Dosis', sans-serif;
@@ -40,6 +44,7 @@
       background: #ffffff;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       padding: 10px 0;
+      border-bottom: 3px solid #FFC300;
     }
     .navbar-brand {
       display: flex;
@@ -49,13 +54,13 @@
       height: 70px; /* Bigger logo */
       margin-right: 15px;
     }
-    .navbar-brand .brand-text h1 {
+    .brand-text h1 {
       margin: 0;
       font-size: 48px; /* Bigger brand name */
       color: #FFC300;
       line-height: 1;
     }
-    .navbar-brand .brand-text h2 {
+    .brand-text h2 {
       margin: 0;
       font-size: 20px;
       color: #000000;
@@ -77,19 +82,22 @@
       width: 24px; /* Larger icons */
       margin-right: 8px;
     }
-    .top-nav-info ul li a {
+    
+    /* Navigation Links */
+    .navbar-nav .nav-link {
+      font-size: 16px;
+      margin: 0 10px;
+      font-weight: 600;
       color: #000000;
     }
     
     /* Hero Slider */
     .slider_section {
       position: relative;
-      /* Attractive background using the provided image */
       background: url('Adtim/images/pexels-photo-2881229.jpeg') no-repeat center center/cover;
       min-height: 500px;
       padding: 60px 0;
     }
-    /* Optional overlay for contrast */
     .slider_section::before {
       content: "";
       position: absolute;
@@ -108,6 +116,7 @@
     .slider_section .carousel-item img {
       max-height: 300px;
       margin: 0 auto;
+      border-radius: 8px;
     }
     
     /* About Section */
@@ -125,6 +134,15 @@
       font-size: 16px;
       line-height: 1.6;
     }
+    .about_section .btn {
+      border: 2px solid #FFC300;
+      color: #FFC300;
+      transition: background 0.3s, color 0.3s;
+    }
+    .about_section .btn:hover {
+      background: #FFC300;
+      color: #000000;
+    }
     
     /* Services Section */
     .class_section {
@@ -137,15 +155,20 @@
       margin-bottom: 10px;
       color: #FFC300;
     }
+    .class_section .heading_container p {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
     .class_section .box {
       background: #ffffff;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .class_section .box:hover {
       transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .class_section .img-box img {
       width: 100%;
@@ -162,7 +185,7 @@
       color: #000000;
     }
     
-    /* Contact Section (Map removed) */
+    /* Contact Section */
     .contact_section {
       padding: 60px 0;
       background: #ffffff;
@@ -177,6 +200,7 @@
       border-radius: 4px;
       padding: 10px;
       border: 1px solid #ddd;
+      margin-bottom: 15px;
     }
     .contact_section button {
       background: #FFC300;
@@ -324,7 +348,7 @@
           <p>
             We are a leading IT company specializing in delivering innovative solutions for businesses of all sizes. Our dedicated team transforms IT infrastructure and processes to drive efficiency, productivity, and growth.
           </p>
-          <a href="Adtim/about.html" class="btn btn-outline-warning">Read More</a>
+          <a href="Adtim/about.html" class="btn">Read More</a>
         </div>
         <div class="col-md-6">
           <img src="Adtim/images/about-image.jpg" alt="About Us" class="img-fluid rounded">
@@ -375,7 +399,7 @@
     </div>
   </section>
   
-  <!-- Contact Section (Map Removed) -->
+  <!-- Contact Section -->
   <section class="contact_section">
     <div class="container">
       <div class="text-center mb-5">
@@ -396,7 +420,7 @@
             <div class="form-group">
               <textarea class="form-control" placeholder="Message" id="message" name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-warning btn-block">SEND</button>
+            <button type="submit" class="btn btn-block">SEND</button>
           </form>
         </div>
       </div>
@@ -430,10 +454,10 @@
         navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
         autoplay: true,
         autoplayHoverPause: true,
-        responsive:{
-          0:{ items: 1 },
-          600:{ items: 2 },
-          1000:{ items: 3 }
+        responsive: {
+          0: { items: 1 },
+          600: { items: 2 },
+          1000: { items: 3 }
         }
       });
     });
