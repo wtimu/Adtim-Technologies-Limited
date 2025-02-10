@@ -97,41 +97,35 @@
 
   <!-- about section -->
   <section class="about_section layout_padding">
-    <div class="container-fluid">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          About Adtim Technologies
+        </h2>
+      </div>
       <div class="row">
-        <div class="col-md-10 ml-auto pr-0">
-          <div class="about_container">
-            <div class="row">
-              <div class="col-md-5 col-lg-6">
-                <div class="detail-box">
-                  <div class="heading_container">
-                    <h2>
-                      About Adtim Technologies
-                    </h2>
-                  </div>
-                  <p>
-                    We are a leading information technology company specializing in delivering innovative solutions to businesses of all sizes. With a dedicated team of experts, we strive to transform your IT infrastructure and processes to drive efficiency, productivity, and growth. Our comprehensive range of services includes software development, network infrastructure, cloud solutions, cybersecurity, and more. Trust us to be your reliable partner in harnessing the power of technology for your business success.
-                  </p>
-                  <hr />
-                </div>
-              </div>
-              <div class="col-md-5 col-lg-6">
-                <div class="img-box">
-                  <img src="images/about-img.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <p class="additional-info">
-                  Adtim Technologies offers comprehensive security solutions to protect your home or business. Our state-of-the-art CCTV cameras provide round-the-clock surveillance, ensuring that your property remains secure at all times. With our advanced security systems, you can monitor your premises remotely, giving you peace of mind even when you're away.
-                </p>
-                <p class="additional-info">
-                  We analyze, design, and implement robust network infrastructure solutions to ensure reliable connectivity and secure data transmission. Our solutions are scalable and optimized to meet your specific requirements.
-                </p>
-              </div>
-            </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <p>
+              We are a leading information technology company specializing in delivering innovative solutions to businesses of all sizes. With a dedicated team of experts, we strive to transform your IT infrastructure and processes to drive efficiency, productivity, and growth. Our comprehensive range of services includes software development, network infrastructure, cloud solutions, cybersecurity, and more. Trust us to be your reliable partner in harnessing the power of technology for your business success.
+            </p>
+            <hr />
           </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="additional-info">
+            Adtim Technologies offers comprehensive security solutions to protect your home or business. Our state-of-the-art CCTV cameras provide round-the-clock surveillance, ensuring that your property remains secure at all times. With our advanced security systems, you can monitor your premises remotely, giving you peace of mind even when you're away.
+          </p>
+          <p class="additional-info">
+            We analyze, design, and implement robust network infrastructure solutions to ensure reliable connectivity and secure data transmission. Our solutions are scalable and optimized to meet your specific requirements.
+          </p>
         </div>
       </div>
     </div>
@@ -140,63 +134,36 @@
 
   <!-- info section -->
   <div class="info_section">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col-md-10 ml-auto">
-          <div class="row info_main-row">
-            <div class="col-md-6 pr-0">
-              <section class="contact_section">
-                <h2>
-                  Request A Call Back
-                </h2>
-                <form action="PHP/submit_feedback.php" method="post">
-                  <div>
-                    <input type="text" placeholder="Name" name="name" required />
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Phone Number" name="phone" />
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email" name="email" required />
-                  </div>
-                  <div>
-                    <input type="text" class="message-box" placeholder="Message" name="message" required />
-                  </div>
-                  <div class="d-flex">
-                    <button type="submit">SEND</button>
-                  </div>
-                </form>
-              </section>
-
-              <section class="footer_section">
-                <div class="social_box">
-                  <a href="https://www.facebook.com/profile.php?id=61558137210437">
-                    <img src="images/facebook.png" alt="">
-                  </a>
-                  <a href="https://twitter.com/wtimu">
-                    <img src="images/twitter.png" alt="">
-                  </a>
-                  <a href="#">
-                    <img src="images/linkedin.png" alt="">
-                  </a>
-                  <a href="https://www.instagram.com/wtimu/">
-                    <img src="images/instagram.png" alt="">
-                  </a>
-                  <a href="https://www.youtube.com/channel/UCDuTMfXOVdlIc350jBxNktg">
-                    <img src="images/youtube.png" alt="">
-                  </a>
-                </div>
-                <p>
-                  &copy; 2025 All Rights Reserved. Design by <a href="https://twitter.com/wtimu">Timothy</a>
-                </p>
-              </section>
-            </div>
-            <div class="col-md-6 px-0">
-              <div class="map_container">
-                <div class="map">
-                  <div id="googleMap" style="width:100%;height:100%;"></div>
-                </div>
+        <div class="col-md-6">
+          <section class="contact_section">
+            <h2>
+              Request A Call Back
+            </h2>
+            <form action="PHP/submit_feedback.php" method="post">
+              <div>
+                <input type="text" placeholder="Name" name="name" required />
               </div>
+              <div>
+                <input type="text" placeholder="Phone Number" name="phone" />
+              </div>
+              <div>
+                <input type="email" placeholder="Email" name="email" required />
+              </div>
+              <div>
+                <input type="text" class="message-box" placeholder="Message" name="message" required />
+              </div>
+              <div class="d-flex">
+                <button type="submit">SEND</button>
+              </div>
+            </form>
+          </section>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap" style="width:100%;height:300px;"></div>
             </div>
           </div>
         </div>
@@ -204,6 +171,33 @@
     </div>
   </div>
   <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <div class="social_box">
+        <a href="https://www.facebook.com/profile.php?id=61558137210437">
+          <img src="images/facebook.png" alt="">
+        </a>
+        <a href="https://twitter.com/wtimu">
+          <img src="images/twitter.png" alt="">
+        </a>
+        <a href="#">
+          <img src="images/linkedin.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/wtimu/">
+          <img src="images/instagram.png" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCDuTMfXOVdlIc350jBxNktg">
+          <img src="images/youtube.png" alt="">
+        </a>
+      </div>
+      <p>
+        &copy; 2025 All Rights Reserved. Design by <a href="https://twitter.com/wtimu">Timothy</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
