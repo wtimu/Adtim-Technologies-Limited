@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adtim Technologies - About</title>
-  <link rel="icon" type="image/x-icon" href="Adtim/images/icons/fav.ico" />
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adtim Technologies - Modern Design</title>
+  <link rel="icon" type="image/x-icon" href="Adtim/images/icons/fav.ico">
+  
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
-
-  <!-- Custom CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+  
   <style>
-    /* Global Styles */
+    /* Color Scheme:
+       Accent:         #FFC300 (yellow/gold)
+       Primary text:   #000000 (black)
+       Background:     #ffffff (white)
+    */
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+      background-color: #ffffff;
+      color: #000000;
       margin: 0;
       padding: 0;
     }
     a {
       text-decoration: none;
+      color: inherit;
     }
     h1, h2, h3 {
       font-family: 'Dosis', sans-serif;
     }
-
+    
     /* Header */
     .header_section {
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 0;
     }
     .navbar-brand {
       display: flex;
       align-items: center;
     }
     .navbar-brand img {
-      height: 50px;
-      margin-right: 10px;
+      height: 70px; /* Bigger logo */
+      margin-right: 15px;
     }
     .navbar-brand .brand-text h1 {
       margin: 0;
-      font-size: 36px;
-      color: #E12125;
+      font-size: 48px; /* Bigger brand name */
+      color: #FFC300;
       line-height: 1;
     }
     .navbar-brand .brand-text h2 {
       margin: 0;
-      font-size: 16px;
-      color: #333;
+      font-size: 20px;
+      color: #000000;
       line-height: 1;
     }
     .top-nav-info ul {
@@ -66,72 +71,76 @@
       margin-right: 20px;
       display: flex;
       align-items: center;
+      font-size: 16px;
     }
     .top-nav-info ul li img {
-      width: 20px;
-      margin-right: 5px;
+      width: 24px; /* Larger icons */
+      margin-right: 8px;
     }
     .top-nav-info ul li a {
-      color: #333;
+      color: #000000;
     }
-
+    
     /* Hero Slider */
     .slider_section {
       position: relative;
-      background-color: #fff;
+      /* Attractive background using the provided image */
+      background: url('Adtim/images/pexels-photo-2881229.jpeg') no-repeat center center/cover;
       min-height: 500px;
       padding: 60px 0;
-      color: #333;
     }
-    .slider_section .detail-box h1 {
-      color: #E12125;
-      font-size: 36px;
-      font-weight: 700;
+    /* Optional overlay for contrast */
+    .slider_section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
     }
-    .slider_section .btn-1 {
-      background: #E12125;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: background 0.3s;
+    .slider_section .carousel-inner {
+      position: relative;
+      z-index: 2;
     }
-    .slider_section .btn-1:hover {
-      background: #c11b1f;
+    .slider_section .carousel-item {
+      text-align: center;
     }
-
+    .slider_section .carousel-item img {
+      max-height: 300px;
+      margin: 0 auto;
+    }
+    
     /* About Section */
     .about_section {
       padding: 60px 0;
-      background: #fff;
+      background: #ffffff;
     }
     .about_section h2 {
       font-size: 32px;
       font-weight: 700;
-      color: #E12125;
+      color: #FFC300;
       margin-bottom: 20px;
     }
     .about_section p {
       font-size: 16px;
       line-height: 1.6;
     }
-
+    
     /* Services Section */
     .class_section {
       padding: 60px 0;
-      background: #f1f1f1;
+      background: #f8f8f8;
     }
     .class_section .heading_container h2 {
       font-size: 32px;
       font-weight: 700;
       margin-bottom: 10px;
-      color: #E12125;
+      color: #FFC300;
     }
     .class_section .box {
-      background: #fff;
+      background: #ffffff;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.3s;
     }
@@ -150,19 +159,19 @@
       font-size: 18px;
       font-weight: 600;
       margin-top: 10px;
-      color: #333;
+      color: #000000;
     }
-
-    /* Contact Section */
+    
+    /* Contact Section (Map removed) */
     .contact_section {
       padding: 60px 0;
-      background: #fff;
+      background: #ffffff;
     }
     .contact_section h2 {
       font-size: 32px;
       font-weight: 700;
       margin-bottom: 30px;
-      color: #E12125;
+      color: #FFC300;
     }
     .contact_section .form-control {
       border-radius: 4px;
@@ -170,36 +179,30 @@
       border: 1px solid #ddd;
     }
     .contact_section button {
-      background: #E12125;
+      background: #FFC300;
       border: none;
       padding: 12px;
       border-radius: 25px;
-      color: #fff;
+      color: #000000;
       font-weight: 600;
       transition: background 0.3s;
     }
     .contact_section button:hover {
-      background: #c11b1f;
+      background: #e6b800;
     }
-    #map {
-      width: 100%;
-      height: 300px;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
+    
     /* Footer */
     .footer_section {
-      background: #333;
-      color: #fff;
+      background: #000000;
+      color: #ffffff;
       padding: 30px 0;
     }
     .footer_section a {
-      color: #fff;
+      color: #FFC300;
       transition: color 0.3s;
     }
     .footer_section a:hover {
-      color: #E12125;
+      color: #ffffff;
     }
     .footer_section .social_box a {
       margin-right: 15px;
@@ -207,14 +210,20 @@
     .footer_section .social_box a img {
       width: 24px;
     }
-
+    
     /* Responsive Adjustments */
     @media (max-width: 768px) {
-      .slider_section .detail-box h1 {
-        font-size: 32px;
+      .navbar-brand .brand-text h1 {
+        font-size: 36px;
+      }
+      .navbar-brand img {
+        height: 60px;
       }
       .slider_section {
         min-height: 400px;
+      }
+      .slider_section .carousel-item img {
+        max-height: 200px;
       }
     }
   </style>
@@ -232,20 +241,23 @@
           </div>
         </a>
         <div class="top-nav-info d-none d-md-block">
-          <ul class="d-flex mb-0 list-unstyled">
+          <ul class="d-flex list-unstyled mb-0">
             <li class="mr-3">
               <a href="tel:+256704251030">
-                <img src="Adtim/images/telephone.png" alt="Call">+256 704 251030
+                <img src="Adtim/images/telephone.png" alt="Telephone Icon">
+                +256 704 251030
               </a>
             </li>
             <li class="mr-3">
               <a href="mailto:support@adtimtech.com">
-                <img src="Adtim/images/mail.png" alt="Email">support@adtimtech.com
+                <img src="Adtim/images/mail.png" alt="Email Icon">
+                support@adtimtech.com
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="Adtim/images/location.png" alt="Location">Kampala-Uganda
+                <img src="Adtim/images/location.png" alt="Location Icon">
+                Kampala-Uganda
               </a>
             </li>
           </ul>
@@ -274,7 +286,7 @@
       </nav>
     </div>
   </header>
-
+  
   <!-- Hero Slider -->
   <section class="slider_section">
     <div id="heroCarousel" class="carousel slide" data-ride="carousel">
@@ -285,31 +297,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="container text-center">
-            <div class="detail-box">
-              <h1>Structured Cabling &amp; LAN</h1>
-              <p>Innovative solutions for modern infrastructure.</p>
-              <a href="Adtim/contact.html" class="btn-1">Contact Us</a>
-            </div>
-          </div>
+          <img src="Adtim/images/Services-02.png" alt="Slide 1" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <div class="container text-center">
-            <div class="detail-box">
-              <h1>CCTV &amp; Security Systems</h1>
-              <p>Advanced security for your business.</p>
-              <a href="Adtim/contact.html" class="btn-1">Contact Us</a>
-            </div>
-          </div>
+          <img src="Adtim/images/Services-03.png" alt="Slide 2" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <div class="container text-center">
-            <div class="detail-box">
-              <h1>Telecom &amp; ISP Solutions</h1>
-              <p>Empowering connectivity and communication.</p>
-              <a href="Adtim/contact.html" class="btn-1">Contact Us</a>
-            </div>
-          </div>
+          <img src="Adtim/images/Services-01.png" alt="Slide 3" class="d-block w-100">
         </div>
       </div>
       <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
@@ -320,7 +314,7 @@
       </a>
     </div>
   </section>
-
+  
   <!-- About Section -->
   <section class="about_section">
     <div class="container">
@@ -330,7 +324,7 @@
           <p>
             We are a leading IT company specializing in delivering innovative solutions for businesses of all sizes. Our dedicated team transforms IT infrastructure and processes to drive efficiency, productivity, and growth.
           </p>
-          <a href="Adtim/about.html" class="btn btn-outline-danger">Read More</a>
+          <a href="Adtim/about.html" class="btn btn-outline-warning">Read More</a>
         </div>
         <div class="col-md-6">
           <img src="Adtim/images/about-image.jpg" alt="About Us" class="img-fluid rounded">
@@ -338,7 +332,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Services Section -->
   <section class="class_section">
     <div class="container">
@@ -350,7 +344,17 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="Adtim/images/Services-01.png" alt="Alarm and Intrusion Protection">
+              <img src="Adtim/images/Services-01.png" alt="Structured Cabling &amp; LAN">
+            </div>
+            <div class="detail-box">
+              <h2>Structured Cabling &amp; LAN</h2>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="img-box">
+              <img src="Adtim/images/Services-02.png" alt="Alarm and Intrusion Protection">
             </div>
             <div class="detail-box">
               <h2>Alarm and Intrusion Protection Systems</h2>
@@ -360,45 +364,25 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="Adtim/images/Services-02.png" alt="Access Control Systems">
-            </div>
-            <div class="detail-box">
-              <h2>Enterprise &amp; Domestic Access Control</h2>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="img-box">
-              <img src="Adtim/images/Services-03.png" alt="CCTV Solutions">
+              <img src="Adtim/images/Services-03.png" alt="Domestic and Enterprise CCTV">
             </div>
             <div class="detail-box">
               <h2>Domestic and Enterprise CCTV</h2>
             </div>
           </div>
         </div>
-        <div class="item">
-          <div class="box">
-            <div class="img-box">
-              <img src="Adtim/images/Services-04.png" alt="Structured Cabling">
-            </div>
-            <div class="detail-box">
-              <h2>Structured Cabling &amp; LAN</h2>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
-
-  <!-- Contact Section -->
+  
+  <!-- Contact Section (Map Removed) -->
   <section class="contact_section">
     <div class="container">
       <div class="text-center mb-5">
         <h2>Request A Call Back</h2>
       </div>
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
           <form action="PHP/submit_feedback.php" method="post">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
@@ -412,16 +396,13 @@
             <div class="form-group">
               <textarea class="form-control" placeholder="Message" id="message" name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-danger btn-block">SEND</button>
+            <button type="submit" class="btn btn-warning btn-block">SEND</button>
           </form>
-        </div>
-        <div class="col-md-6">
-          <div id="map"></div>
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer class="footer_section">
     <div class="container text-center">
@@ -435,7 +416,7 @@
       <p>&copy; 2025 All Rights Reserved. Design by <a href="https://twitter.com/wtimu">Timothy</a></p>
     </div>
   </footer>
-
+  
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
@@ -457,43 +438,5 @@
       });
     });
   </script>
-
-  <!-- Google Maps API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=INSERT_YOUR_API_KEY&callback=initMap" async defer></script>
-  <script>
-    let map;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 49.496675, lng: -102.65625},
-        zoom: 4
-      });
-      // Optional: Add a custom control to recenter the map
-      const chicago = { lat: 41.85, lng: -87.65 };
-      const centerControl = document.createElement("button");
-      centerControl.className = "btn btn-outline-light";
-      centerControl.textContent = "Center Map";
-      centerControl.addEventListener("click", () => {
-        map.setCenter(chicago);
-      });
-      map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControl);
-    }
-  </script>
-
-  <!-- Tawk.to Live Chat Script -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function(){
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/67048f1902d78d1a30eddff7/1i9kstv6l';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
-
-  <!-- Elfsight Widget Script -->
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-556f28ca-a28f-4ebd-bc6106f0b497" data-elfsight-app-lazy></div>
 </body>
 </html>
