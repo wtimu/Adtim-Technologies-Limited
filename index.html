@@ -13,7 +13,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
-  
+  <!-- jQuery (Required for Owl Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
   <style>
     /* Global Styles */
     body {
@@ -471,71 +480,94 @@
   <!-- Services Section -->
   <section class="class_section">
     <div class="container">
-      <div class="text-center mb-5">
+    <div class="text-center mb-5">
         <h2>Our Range of Services</h2>
         <p>Some of our specialized services</p>
-      </div>
-      <div class="owl-carousel owl_carousel1">
-        <div class="item">
-          <div class="box">
-            <div class="img-box">
-              <img src="Adtim/images/Services-01.png" alt="Structured Cabling &amp; LAN">
-            </div>
-            <div class="detail-box">
-              <h2>Structured Cabling &amp; LAN</h2>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="img-box">
-              <img src="Adtim/images/Services-02.png" alt="Alarm and Intrusion Protection">
-            </div>
-            <div class="detail-box">
-              <h2>Alarm and Intrusion Protection Systems</h2>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="img-box">
-              <img src="Adtim/images/Services-03.png" alt="Domestic and Enterprise CCTV">
-            </div>
-            <div class="detail-box">
-              <h2>Domestic and Enterprise CCTV</h2>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-  
-  <!-- Contact Section -->
-  <section class="contact_section">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2>Request A Call Back</h2>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <form action="PHP/submit_feedback.php" method="post">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
+    <div class="owl-carousel owl_carousel1">
+        <div class="item">
+            <div class="box">
+                <div class="img-box">
+                    <img src="Adtim/images/Services-01.png" alt="Structured Cabling &amp; LAN">
+                </div>
+                <div class="detail-box">
+                    <h2>Structured Cabling &amp; LAN</h2>
+                </div>
             </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone">
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" placeholder="Message" id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-block">SEND</button>
-          </form>
         </div>
-      </div>
+        <div class="item">
+            <div class="box">
+                <div class="img-box">
+                    <img src="Adtim/images/Services-02.png" alt="Alarm and Intrusion Protection">
+                </div>
+                <div class="detail-box">
+                    <h2>Alarm and Intrusion Protection Systems</h2>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box">
+                <div class="img-box">
+                    <img src="Adtim/images/Services-03.png" alt="Domestic and Enterprise CCTV">
+                </div>
+                <div class="detail-box">
+                    <h2>Domestic and Enterprise CCTV</h2>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box">
+                <div class="img-box">
+                    <img src="Adtim/images/Services-04.png" alt="Access Control Systems">
+                </div>
+                <div class="detail-box">
+                    <h2>Access Control Systems</h2>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box">
+                <div class="img-box">
+                    <img src="Adtim/images/Services-05.png" alt="Fire Detection & Suppression">
+                </div>
+                <div class="detail-box">
+                    <h2>Fire Detection & Suppression</h2>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box">
+                <div class="img-box">
+                    <img src="Adtim/images/Services-06.png" alt="Biometric Attendance Systems">
+                </div>
+                <div class="detail-box">
+                    <h2>Biometric Attendance Systems</h2>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box">
+                <div class="img-box">
+                    <img src="Adtim/images/Services-07.png" alt="Network Security Solutions">
+                </div>
+                <div class="detail-box">
+                    <h2>Network Security Solutions</h2>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="box">
+                <div class="img-box">
+                    <img src="Adtim/images/Services-08.png" alt="Smart Home Automation">
+                </div>
+                <div class="detail-box">
+                    <h2>Smart Home Automation</h2>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
   </section>
   
   <!-- Footer -->
@@ -586,6 +618,26 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
+<script>
+$(document).ready(function(){
+    $(".owl_carousel1").owlCarousel({
+        loop: true,  /* Enables infinite loop */
+        margin: 10,  /* Space between items */
+        nav: true,   /* Show navigation arrows */
+        autoplay: true,  /* Enable automatic sliding */
+        autoplayTimeout: 3000, /* Slide every 3 seconds */
+        autoplayHoverPause: true, /* Pause on hover */
+        smartSpeed: 1000, /* Smooth transition speed */
+        items: 3, /* Number of items visible */
+        responsive: {
+            0: { items: 1 },  /* 1 item on small screens */
+            600: { items: 2 }, /* 2 items on tablets */
+            1000: { items: 3 } /* 3 items on desktops */
+        }
+    });
+});
+</script>
+
 </body>
 </html>
 
