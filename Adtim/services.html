@@ -1,359 +1,507 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdtimTech | Services</title>
+  <link rel="icon" type="image/x-icon" href="images/icons/fav.ico">
 
-  <title>AdtimTech|Services</title>
-<link rel="icon" type="image/x-icon" href="images/icons/fav.ico">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFC300; /* Yellow/Gold */
+      color: #000;
+      margin: 0;
+      padding: 0;
+      /* Top padding to prevent content hiding behind fixed header */
+      padding-top: 130px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    a:hover {
+      background: rgba(0, 0, 0, 0.05);
+      color: #FFC300;
+    }
+    h1, h2, h3 {
+      font-family: 'Dosis', sans-serif;
+    }
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    /* ------------------ Header Section ------------------ */
+    .header_section {
+      background: url('images/servers.jpg') no-repeat center center/cover;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1030;
+      border-bottom: 3px solid #FFC300;
+      padding: 5px 0;
+    }
+    .header_section::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .header_section .container {
+      position: relative;
+      z-index: 1;
+    }
+    /* Header Grid Layout:
+       - Left Cell (.header-logo): Displays the logo (spanning both rows)
+       - Right Cell (.header-right): Top row shows contact info (or mobile toggler) and bottom row shows the navigation menu */
+    .header-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .header-logo {
+      flex: 0 0 25%;
+      max-width: 25%;
+      display: flex;
+      align-items: center;
+    }
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+    .header-logo img {
+      height: 100px;
+      margin-right: 15px;
+    }
+    .brand-text h1 {
+      margin: 0;
+      font-size: 60px;
+      color: #FFC300;
+      line-height: 1;
+    }
+    .brand-text h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #fff;
+      line-height: 1;
+    }
+    .header-right {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+    /* Top Row: Contact Info (desktop) / Mobile Toggler */
+    .header-top {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 15px;
+    }
+    .top-nav-info {
+      font-size: 16px;
+    }
+    .top-nav-info ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .top-nav-info li {
+      display: inline-block;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+    .top-nav-info li a {
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .top-nav-info li a:hover {
+      background: rgba(255, 195, 0, 0.4);
+    }
+    .mobile-toggler {
+      display: none;
+    }
+    /* Bottom Row: Navigation Menu */
+    .header-menu {
+      margin-top: 5px;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-size: 16px;
+      margin: 0 10px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      background: rgba(255, 195, 0, 0.4);
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    @media (max-width: 767.98px) {
+      .header-grid {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-logo, .header-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .header-right {
+        margin-top: 5px;
+      }
+      .header-top .top-nav-info {
+        display: none;
+      }
+      .mobile-toggler {
+        display: block;
+      }
+    }
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    /* ------------------ Services Section ------------------ */
+    .services_section {
+      padding: 60px 0;
+      background: #fff;
+    }
+    .services_section .heading_container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .services_section .heading_container h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #FFC300;
+      margin-bottom: 10px;
+    }
+    .services_section .heading_container p {
+      font-size: 16px;
+      color: #000;
+    }
+    /* Service Boxes */
+    .services_section .box {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .services_section .box .img-box img {
+      width: 100%;
+      display: block;
+    }
+    .services_section .box .detail-box {
+      padding: 15px;
+    }
+    .services_section .box .detail-box h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 10px;
+    }
+    .services_section .box .detail-box p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    /* ------------------ Info Section (Contact Form & Map) ------------------ */
+    .info_section {
+      padding: 60px 0;
+      background: #f8f8f8;
+    }
+    .info_section .contact_section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #FFC300;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .info_section .contact_section form input,
+    .info_section .contact_section form .message-box {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .info_section .contact_section form button {
+      background: #FFC300;
+      border: none;
+      padding: 12px;
+      border-radius: 25px;
+      color: #000;
+      font-weight: 600;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    .info_section .contact_section form button:hover {
+      background: #e6b800;
+    }
+
+    /* ------------------ Footer Section ------------------ */
+    .footer_section {
+      background: #000;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .footer_section .social_box a {
+      margin-right: 15px;
+    }
+    .footer_section .social_box a img {
+      width: 24px;
+      filter: brightness(0) invert(1);
+    }
+    .footer_section p {
+      margin-top: 10px;
+    }
+  </style>
 </head>
-
 <body class="sub_page">
+  <!-- Hero Area (for header background) -->
   <div class="hero_area">
-    <!-- header section strats -->
+    <!-- Header Section -->
     <header class="header_section">
       <div class="container">
-        <div class="header_nav">
-          <a class="navbar-brand brand_desktop" href="index.html">
-            <img src="images/Logo Small.png" alt="logo"/>
-          </a>
-          <div class="main_nav">
-            <div class="top_nav">
-              <ul class=" ">
-                <li class="">
-                  <a class="" href="tel:+256704251030">
-                    <img src="images/telephone.png" alt="Call" />
-                    <span> +256 704 251030</span>
-                  </a>
-                </li>
-                <li class="">
-                  <a class="" href="">
-                    <img src="images/mail.png" alt="" />
-                    <span>support@adtimtech.com</span>
-                  </a>
-                </li>
-                <li class="">
-                  <a class="" href="">
-                    <img src="images/location.png" alt="" />
-                    <span>Kampala-Uganda</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="bottom_nav">
-              <nav class="navbar navbar-expand-lg custom_nav-container">
-                <a class="navbar-brand brand_mobile" href="index.html">
-                  <img src="images/Logo Small.png" alt="" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="header-grid">
+          <!-- Left Cell: Logo (spanning both rows) -->
+          <div class="header-logo">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/Logo Small.png" alt="Adtim Technologies Logo">
+              <div class="brand-text">
+                <h1>ADTIM</h1>
+                <h2>TECHNOLOGIES</h2>
+              </div>
+            </a>
+          </div>
+          <!-- Right Cell: Two Rows -->
+          <div class="header-right">
+            <!-- Top Row: Contact Info (desktop) / Mobile Toggler -->
+            <div class="header-top">
+              <div class="top-nav-info d-none d-md-block">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="tel:+256704251030">
+                      <img src="images/telephone.png" alt="Telephone Icon"> +256 704 251030
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="mailto:support@adtimtech.com">
+                      <img src="images/mail.png" alt="Email Icon"> support@adtimtech.com
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <img src="images/location.png" alt="Location Icon"> Kampala-Uganda
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mobile-toggler d-block d-md-none text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMain">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                    <ul class="navbar-nav  ">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="services.html"> Services </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                      </li>
-                    </ul>
-                    <form class="form-inline">
-                      <button class="btn ml-3 ml-lg-5 nav_search-btn" type="submit"></button>
-                    </form>
-                  </div>
+              </div>
+            </div>
+            <!-- Bottom Row: Navigation Menu -->
+            <div class="header-menu">
+              <nav class="navbar navbar-expand-md navbar-light px-0">
+                <div class="collapse navbar-collapse" id="navbarsMain">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline">
+                    <button class="btn ml-3 ml-lg-5 nav_search-btn" type="submit"></button>
+                  </form>
                 </div>
               </nav>
             </div>
-          </div>
-        </div>
+          </div><!-- /.header-right -->
+        </div><!-- /.header-grid -->
       </div>
     </header>
-    <!-- end header section -->
+    <!-- End Header Section -->
   </div>
+  <!-- End Hero Area -->
 
-
-  <!-- blog section -->
-
-  <section class="blog_section layout_padding">
+  <!-- Services Section -->
+  <section class="services_section layout_padding">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-10 ml-auto">
           <div class="heading_container">
-            <h2>
-              OUR SERVICES
-            </h2>
-            <p>
-              Here are some of our Services
-            </p>
+            <h2>OUR SERVICES</h2>
+            <p>Here are some of our Services</p>
           </div>
         </div>
       </div>
       <div class="row">
+        <!-- Left Column: Service Boxes (Box B1) -->
         <div class="col-md-6 pl-0">
           <div class="box b1">
             <div class="img-box">
-              <img src="images/b1.jpg" alt="">
+              <img src="images/b1.jpg" alt="Service Image 1">
             </div>
             <div class="row">
               <div class="col-lg-8 col-md-10 ml-auto offset-lg-2">
                 <div class="detail-box">
-                  <div class="img_date">
-                    <h6>&nbsp;
-                     </h6>
-                  </div>
-                  <h3>
-                  Data, Voice &amp; Video Networking </h3>
+                  <h3>Data, Voice &amp; Video Networking</h3>
                   <p>
-                  Networks have to efficiently deliver application services to and from end users. Our trained technical team can guide on structured cabling and execute data channels that support Gigabit and 10-Gigabit Ethernet or fiber access in addition on to Wi-Fi network planning and roll out. We Supply and maintenance of a wide range of IT infrastructure - Servers, Notebooks, Net books etc of various brands like IBM, HP, Dell, Acer etc that suit customer's technical requirements and IT budget. Our services include Design, implementation, maintenance of LAN &amp; WAN solutions. Solutions also include: RF Planning and Implementation, Optic fiber, Remote Connectivity, MPLS, VPN ,ILD ,NLD&amp; IPLC &amp; P2P.</p>
-</div>
+                    Networks have to efficiently deliver application services to and from end users. Our trained technical team guides on structured cabling and executes data channels that support Gigabit and 10-Gigabit Ethernet or fiber access in addition to Wi-Fi network planning and rollout. We supply and maintain a wide range of IT infrastructure – from servers to notebooks – tailored to your technical requirements and budget. Our services include design, implementation, and maintenance of LAN &amp; WAN solutions.
+                  </p>
+                </div>
               </div>
               <div class="col-lg-8 col-md-10 ml-auto offset-lg-2">
                 <div class="detail-box">
-                  <div class="img_date">
-                    <h6>&nbsp; </h6>
-                  </div>
-                  <h3> Power Backup Solutions</h3>
-                  <p> We can help you deploy world class, redundant, scalable, 10-100kW (208V), 100-500kW (480V), 16-500kW (400V) 3-phase UPS power protection systems designed to cost effectively provide high levels of availability. Our solutions are made up of dedicated and redundant modules--power, intelligence, battery and bypass, all engineered into a design that is easily and efficiently serviceable, this architecture can scale power and runtime as demand grows or as higher levels of availability are required. In addition our clients enjoy highly manageable devices and self-diagnostic capabilities and standardized modules which mitigate the risk of human error, resulting in increased overall data center reliability.</p>
+                  <h3>Power Backup Solutions</h3>
+                  <p>
+                    We help you deploy redundant, scalable UPS power protection systems designed to provide high levels of availability. Our solutions use modular components—power, intelligence, battery, and bypass—engineered for efficient serviceability. They scale as demand grows and include self-diagnostic features to increase data center reliability.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-8 col-md-10 ml-auto offset-lg-2">
                 <div class="detail-box">
-                  <div class="img_date">
-                    <h6>&nbsp; </h6>
-                  </div>
-                  
+                  <h3>Access Control Systems &amp; Solutions</h3>
+                  <p>
+                    To protect your physical, IP, and human assets, our access control solutions restrict unauthorized entry and monitor who comes, when, and where. Our adaptive, modular, and scalable system meets the needs of organizations of any size and includes value-added features like Anti-Passback, 2-Person rule, and Smart Card identification for foolproof security.
+                  </p>
                 </div>
               </div>
-              <div class="col-lg-8 col-md-10 ml-auto offset-lg-2">
-                <div class="detail-box">
-                  <div class="img_date">
-                    <h6>&nbsp; </h6>
-                  </div>
-                  <h3> Access Control Systems &amp; Solutions</h3>
-                  <p> Pertaining to the growing demand and security concerns, access control has always been vital for every organization. Main objective of the Access Control is to begin with – protect physical, IP and human assets. This requires restricting unauthorized people from reaching pre-defined areas. Moreover, the basic question of who, where and when with adequate flexibility and scalability needs to be addressed with door access control system. To meet this requirement, Matrix COSEC presents an adaptive, modular, scalable and function-rich Access Control solution. It is designed to meet access control needs of any organization irrespective of its size, locations, layouts, and timings. In addition, a range of value-added features like Anti-Passback, 2-Person rule, First-In User, Blocked Users, Door Auto Re-lock, Guard Tour, Man-Trap and Smart Card based Identification ensures Fool-proof security of physical assets and safety of manpower.</p>
-                </div>
-              </div>
-              <div class="col-lg-8 col-md-10">&nbsp;</div>
             </div>
           </div>
         </div>
+        <!-- Right Column: Service Boxes (Box B2) -->
         <div class="col-md-6 pr-0">
           <div class="box b2">
             <div class="img-box">
-              <img src="images/b2.jpg" alt="">
+              <img src="images/b2.jpg" alt="Service Image 2">
             </div>
             <div class="row">
               <div class="col-lg-8 col-md-10 mr-auto">
                 <div class="detail-box">
-                  <div class="img_date">
-                    <h6>&nbsp;
-                     </h6>
-                  </div>
-                  <h3>
-                    IT Consulting
-                  </h3>
+                  <h3>IT Consulting</h3>
                   <p>
-                    IT consulting services are advisory services that help clients assess different technology strategies and, in doing so, align their technology strategies with their business or process strategies. These services support customers’ IT initiatives by providing strategic, architectural, operational and implementation planning. Strategic planning includes advisory services that help clients assess their IT needs and formulate system implementation plans. Architecture planning includes advisory services that combine strategic plans and knowledge of emerging technologies to create the logical design of the system and the supporting infrastructure to meet customer requirements. Operational assessment/benchmarking include services that assess the operating efficiency and capacity of a client’s IT environment. Implementation planning includes services aimed at advising customers on the rollout and testing of new solution deployments. Our expertise will help you to make technology purchases or strategy decisions and resolve technology challenges. Enjoy short term or “virtual-CIO” services including expert advice on IT strategy to a company that lacks high-level IT expertise in house.
+                    Our IT consulting services help you align your technology strategies with your business goals. We provide strategic, architectural, and operational planning to assess your IT needs and guide you through implementation. Enjoy virtual-CIO services and expert advice to resolve technology challenges and make informed decisions.
                   </p>
-</div>
-              </div>
-             
-            </div>
-            
-            <div class="row">
-              <div class="col-lg-8 col-md-10 mr-auto">
-                <div class="detail-box">
-                  <div class="img_date">
-                    <h6>&nbsp; </h6>
-                  </div>
-                  <h3> CCTV &amp; IP Survellance Solutions</h3>
-                  <p> Live images from anywhere, anytime - digitization has changed the world of video surveillance and has opened new ways to keeping businesses and homes safe. With an extensive range of high-quality IP security products such as Cameras, Network Video Recorders (NVRs), Signal Extenders and others, Aircom provides end-to-end solutions to benefit from the advantages of digital surveillance. The Internet of Things (IoT) is rapidly creating business opportunities and the surveillance segment is among one of the largest. Requests of higher resolution, easy installation and management for surveillance system, analogue security cameras are gradually being replaced with digital IP cameras. Following the increased development of IP camera technology, PoE switches have played an essential role in surveillance deployments.</p>
                 </div>
               </div>
-             
+            </div>
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mr-auto">
+                <div class="detail-box">
+                  <h3>CCTV &amp; IP Surveillance Solutions</h3>
+                  <p>
+                    Experience live images from anywhere, anytime. With high-quality IP security products—cameras, NVRs, and more—we provide end-to-end digital surveillance solutions. As analogue systems are replaced with digital IP cameras, our PoE switch integrations ensure seamless surveillance deployments.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- End Services Section -->
 
-  <!-- end blog section -->
-
-  <!-- info section -->
+  <!-- Info Section: Contact Form & Map -->
   <div class="info_section">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col-md-10 ml-auto">
-          <div class="row info_main-row">
-            <div class="col-md-6 pr-0">
-
-              <!-- contact section -->
-
-              <section class="contact_section">
-                <h2>
-                  Request A Call Back
-                </h2>
-                <form action="PHP/submit_feedback.php" method="post">
-    <div>
-        <label for="name"></label>
-        <input type="text" placeholder="Name" id="name" name="name" required>
-    </div>
-    <div>
-        <label for="phone"></label>
-        <input type="text" placeholder="Phone Number" id="phone" name="phone">
-    </div>
-    <div>
-        <label for="email"></label>
-        <input type="email" placeholder="Email" id="email" name="email" required>
-    </div>
-    <div>
-        <label for="message"></label>
-        
-		<input type="text" class="message-box" placeholder="Message" id="message" name="message" required />
-    </div>
-    <div class="d-flex">
-        <button type="submit">SEND</button>
-    </div>
-</form>
-                <div class="map_container">
-                  <div class="map">
-                    <div id="googleMap" style="width:100%;height:300px;"></div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- end contact section -->
-
-
-              <!-- footer section -->
-             <section class=" footer_section ">
-                <div class="social_box">
-                  <a href="https://www.facebook.com/profile.php?id=61558137210437">
-                    <img src="images/facebook.png" alt="">
-                  </a>
-                  <a href="https://twitter.com/wtimu">
-                    <img src="images/twitter.png" alt="">
-                  </a>
-                  <a href="#">
-                    <img src="images/linkedin.png" alt="">
-                  </a>
-                  <a href="https://www.instagram.com/wtimu/">
-                    <img src="images/instagram.png" alt="">
-                  </a>
-                  <a href="https://www.youtube.com/channel/UCDuTMfXOVdlIc350jBxNktg">
-                    <img src="images/youtube.png" alt="">
-                  </a>
-                </div>
-                <p>
-                  &copy; 2025 All Rights Reserved. Design by <a href="https://twitter.com/wtimu">Timothy</a>
-                </p>
-              </section>
-
-              <!-- footer section -->
-
-            </div>
-            <div class="col-md-6  px-0">
-              <div class="img-box"> </div>
+        <!-- Contact Form Column -->
+        <div class="col-md-6">
+          <section class="contact_section">
+            <h2>Request A Call Back</h2>
+            <form action="PHP/submit_feedback.php" method="post">
+              <div>
+                <input type="text" placeholder="Name" id="name" name="name" required>
+              </div>
+              <div>
+                <input type="text" placeholder="Phone Number" id="phone" name="phone">
+              </div>
+              <div>
+                <input type="email" placeholder="Email" id="email" name="email" required>
+              </div>
+              <div>
+                <input type="text" class="message-box" placeholder="Message" id="message" name="message" required>
+              </div>
+              <div class="d-flex">
+                <button type="submit">SEND</button>
+              </div>
+            </form>
+          </section>
+        </div>
+        <!-- Map Column -->
+        <div class="col-md-6">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap" style="width:100%;height:300px;"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- end info section -->
+  <!-- End Info Section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- Footer Section -->
+  <section class="footer_section">
+    <div class="container">
+      <div class="social_box">
+        <a href="https://www.facebook.com/profile.php?id=61558137210437">
+          <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/wtimu">
+          <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="#">
+          <img src="images/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/wtimu/">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/channel/UCDuTMfXOVdlIc350jBxNktg">
+          <img src="images/youtube.png" alt="YouTube">
+        </a>
+      </div>
+      <p>&copy; 2025 All Rights Reserved. Design by <a href="https://twitter.com/wtimu">Timothy</a></p>
+    </div>
+  </section>
+  <!-- End Footer Section -->
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-
+  <!-- ------------------ Scripts ------------------ -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
   <script>
-    function openNav() {
-      document.getElementById("myNav").classList.toggle("menu_width");
-      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
-    }
-  </script>
-
-  <!-- owl carousel script -->
-  <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      navText: [],
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 2
-        }
-      }
-    });
-
-
-    $(".owl_carousel1").owlCarousel({
-      loop: true,
-      margin: 25,
-      nav: true,
-      navText: [],
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 2
-        }
-      }
-    });
-  </script>
-  <!-- end owl carousel script -->
-
-  <script>
-    /** google_map js **/
-
     function myMap() {
       var mapProp = {
         center: new google.maps.LatLng(40.712775, -74.005973),
@@ -362,23 +510,20 @@
       var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
     }
   </script>
-  <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67048f1902d78d1a30eddff7/1i9kstv6l';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+  
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/67048f1902d78d1a30eddff7/1i9kstv6l';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
-
 </html>
