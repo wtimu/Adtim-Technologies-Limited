@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adtim Technologies Limited</title>
+  <link rel="icon" type="image/x-icon" href="Adtim/images/icons/fav.ico">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFC300; /* Yellow/Gold */
+      color: #000000;
+      margin: 0;
+      padding: 0;
+      /* Add enough top padding so content isn't hidden by the fixed header */
+      padding-top: 130px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    a:hover {
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.05);
+      color: #FFC300;
+    }
+    h1, h2, h3 {
+      font-family: 'Dosis', sans-serif;
+    }
+    
+    /* Header Section (Fixed) */
+    .header_section {
+      background: url('Adtim/images/servers.jpg') no-repeat center center/cover;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1030;
+      border-bottom: 3px solid #FFC300;
+      padding: 5px 0;
+    }
+    .header_section::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .header_section .container {
+      position: relative;
+      z-index: 1;
+    }
+    /* Header Grid Layout:
+       - Left cell: Logo (spanning two rows)
+       - Right cell: Top row = Contact info (desktop) or Toggler (mobile),
+                     Bottom row = Navigation menu  */
+    .header-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .header-logo {
+      /* On large screens, allocate about 25% for the logo */
+      flex: 0 0 25%;
+      max-width: 25%;
+      display: flex;
+      align-items: center;
+    }
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+    .header-logo img {
+      height: 100px;
+      max-height: 100%;
+      width: auto;
+      margin-right: 15px;
+    }
+    .brand-text h1 {
+      margin: 0;
+      font-size: 60px;
+      color: #FFC300;
+      line-height: 1;
+    }
+    .brand-text h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #ffffff;
+      line-height: 1;
+    }
+    .header-right {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+    /* Top row in right cell: Contact info (desktop) or toggler (mobile) */
+    .header-top {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 15px;
+    }
+    .top-nav-info {
+      font-size: 16px;
+    }
+    .top-nav-info ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .top-nav-info li {
+      display: inline-block;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+    .top-nav-info li a {
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .top-nav-info li a:hover {
+      background: rgba(255, 195, 0, 0.4);
+    }
+    /* Mobile: Show toggler in header-top instead of contacts */
+    .header-top .mobile-toggler {
+      display: none;
+    }
+    @media (max-width: 767.98px) {
+      .header-top .top-nav-info {
+        display: none;
+      }
+      .header-top .mobile-toggler {
+        display: block;
+      }
+    }
+    /* Bottom row in right cell: Navigation Menu */
+    .header-menu {
+      margin-top: 5px;
+    }
+    .navbar-nav .nav-link {
+      color: #ffffff !important;
+      font-size: 16px;
+      margin: 0 10px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      background: rgba(255, 195, 0, 0.4);
+    }
+    /* Toggler Button */
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    
+    /* Hero Slider */
+    .slider_section {
+      position: relative;
+      background: url('Adtim/images/pexels-photo-2881229.jpeg') no-repeat center center/cover;
+      min-height: 500px;
+      padding: 60px 0;
+    }
+    .slider_section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+    .slider_section .carousel-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .slider_section .carousel-item {
+      text-align: center;
+    }
+    .slider_section .carousel-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .carousel-caption {
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 4px;
+      bottom: 20px;
+    }
+    .carousel-caption h5 {
+      color: #FFC300;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    
+    /* About Section */
+    .about_section {
+      padding: 60px 0;
+      background: #ffffff;
+    }
+    .about_section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #FFC300;
+      margin-bottom: 20px;
+    }
+    .about_section p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .about_section .btn {
+      border: 2px solid #FFC300;
+      color: #FFC300;
+      transition: background 0.3s, color 0.3s;
+      padding: 10px 20px;
+      border-radius: 25px;
+    }
+    .about_section .btn:hover {
+      background: #FFC300;
+      color: #000000;
+    }
+    .about-images .img-item {
+      margin-bottom: 15px;
+    }
+    
+    /* Services Section */
+    .class_section {
+      padding: 60px 0;
+      background: #f8f8f8;
+    }
+    .class_section .heading_container h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #FFC300;
+    }
+    .class_section .heading_container p {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .class_section .box {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .class_section .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .class_section .img-box img {
+      width: 100%;
+      display: block;
+    }
+    .class_section .detail-box {
+      padding: 15px;
+      text-align: center;
+    }
+    .class_section .detail-box h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #000000;
+    }
+    
+    /* Contact Section */
+    .contact_section {
+      padding: 60px 0;
+      background: #ffffff;
+    }
+    .contact_section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #FFC300;
+    }
+    .contact_section .form-control {
+      border-radius: 4px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+    }
+    .contact_section button {
+      background: #FFC300;
+      border: none;
+      padding: 12px;
+      border-radius: 25px;
+      color: #000000;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .contact_section button:hover {
+      background: #e6b800;
+    }
+    
+    /* Footer Section */
+    .footer_section {
+      background: #000000;
+      color: #ffffff;
+      padding: 15px 0;
+    }
+    .footer_section a {
+      color: #FFC300;
+      transition: color 0.3s;
+    }
+    .footer_section a:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .footer_section .social_box a {
+      margin-right: 15px;
+    }
+    .footer_section .social_box a img {
+      width: 24px;
+      filter: brightness(0) invert(1);
+    }
+    .footer_section .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      .footer_section .footer-content {
+        flex-direction: row;
+      }
+      .footer_section p {
+        margin: 0;
+        padding-left: 15px;
+      }
+    }
+    
+    /* Responsive Adjustments for Mobile */
+    @media (max-width: 767.98px) {
+      .brand-text h1 {
+        font-size: 36px;
+      }
+      .header-logo img {
+        height: 60px;
+      }
+      /* Change header grid layout to vertical so the logo is not overlapped */
+      .header-grid {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+      .header-logo, .header-right {
+         flex: 0 0 100%;
+         max-width: 100%;
+      }
+      .header-right {
+         margin-top: 5px;
+      }
+      .slider_section {
+        min-height: 400px;
+      }
+      .slider_section .carousel-item img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header_section">
+    <div class="container">
+      <div class="header-grid">
+        <!-- Left Cell: Logo (spanning two rows) -->
+        <div class="header-logo">
+          <a class="navbar-brand" href="index.html">
+            <img src="Adtim/images/Logo Small.png" alt="Adtim Technologies Logo">
+            <div class="brand-text">
+              <h1>ADTIM</h1>
+              <h2>TECHNOLOGIES</h2>
+            </div>
+          </a>
+        </div>
+        <!-- Right Cell: Two Rows (Top: Contact/Toggler, Bottom: Menu) -->
+        <div class="header-right">
+          <!-- Top Row: Desktop Contact Info or Mobile Toggler -->
+          <div class="header-top">
+            <div class="top-nav-info d-none d-md-block">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a href="tel:+256704251030">
+                    <img src="Adtim/images/telephone.png" alt="Telephone Icon"> +256 704 251030
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="mailto:support@adtimtech.com">
+                    <img src="Adtim/images/mail.png" alt="Email Icon"> support@adtimtech.com
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <img src="Adtim/images/location.png" alt="Location Icon"> Kampala-Uganda
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Mobile: Show toggler instead of contact info -->
+            <div class="mobile-toggler d-block d-md-none text-right">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMain">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+          <!-- Bottom Row: Navigation Menu -->
+          <div class="header-menu">
+            <nav class="navbar navbar-expand-md navbar-light px-0">
+              <div class="collapse navbar-collapse" id="navbarsMain">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Adtim/about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Adtim/services.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Adtim/contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div><!-- /.header-right -->
+      </div><!-- /.header-grid -->
+    </div><!-- /.container -->
+  </header>
+  
+  <!-- About Section -->
+  <section class="about_section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2>About Adtim Technologies</h2>
+          <p>
+            We are a leading IT company specializing in delivering innovative solutions for businesses of all sizes. Our dedicated team transforms IT infrastructure and processes to drive efficiency, productivity, and growth.
+          </p>
+          <a href="Adtim/about.html" class="btn">Read More</a>
+        </div>
+        <div class="col-md-6">
+          <div class="row about-images">
+            <div class="col-12 img-item">
+              <img src="Adtim/images/1520234278541.jpeg" alt="Our Team" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="class_section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Our Range of Services</h2>
+        <p>Some of our specialized services</p>
+      </div>
+      <div class="owl-carousel owl_carousel1">
+        <div class="item">
+          <div class="box">
+            <div class="img-box">
+              <img src="Adtim/images/Services-01.png" alt="Structured Cabling &amp; LAN">
+            </div>
+            <div class="detail-box">
+              <h2>Structured Cabling &amp; LAN</h2>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="img-box">
+              <img src="Adtim/images/Services-02.png" alt="Alarm and Intrusion Protection">
+            </div>
+            <div class="detail-box">
+              <h2>Alarm and Intrusion Protection Systems</h2>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="img-box">
+              <img src="Adtim/images/Services-03.png" alt="Domestic and Enterprise CCTV">
+            </div>
+            <div class="detail-box">
+              <h2>Domestic and Enterprise CCTV</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact_section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Request A Call Back</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form action="PHP/submit_feedback.php" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Message" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">SEND</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer_section">
+    <div class="container footer-content text-center">
+      <div class="social_box">
+        <a href="https://www.facebook.com/profile.php?id=61558137210437"><img src="Adtim/images/facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/wtimu"><img src="Adtim/images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="Adtim/images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/wtimu/"><img src="Adtim/images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCDuTMfXOVdlIc350jBxNktg"><img src="Adtim/images/youtube.png" alt="YouTube"></a>
+      </div>
+      <p>&copy; 2025 All Rights Reserved. Design by <a href="https://twitter.com/wtimu">Timothy</a></p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.owl_carousel1').owlCarousel({
+        loop: true,
+        margin: 25,
+        nav: true,
+        navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+          0: { items: 1 },
+          600: { items: 2 },
+          1000: { items: 3 }
+        }
+      });
+    });
+  </script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/67048f1902d78d1a30eddff7/1i9kstv6l';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>
+
