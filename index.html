@@ -22,8 +22,8 @@
       color: #000000;
       margin: 0;
       padding: 0;
-      /* Add top padding to prevent content from hiding behind fixed header */
-      padding-top: 180px;
+      /* Give enough top padding so content is not hidden by fixed header */
+      padding-top: 120px;
     }
     a {
       text-decoration: none;
@@ -46,8 +46,8 @@
       top: 0;
       width: 100%;
       z-index: 1030;
-      padding: 10px 0;
       border-bottom: 3px solid #FFC300;
+      padding: 5px 0;
     }
     .header_section::after {
       content: "";
@@ -66,7 +66,7 @@
       align-items: center;
     }
     .navbar-brand img {
-      height: 100px;
+      height: 100px; /* Adjust as needed */
       max-height: 100%;
       width: auto;
       margin-right: 15px;
@@ -83,27 +83,22 @@
       color: #ffffff;
       line-height: 1;
     }
-    
-    /* Top Navigation Contact Info */
-    .top-nav-info ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
+    /* Contact Info (visible on medium and larger screens) */
+    .top-nav-info {
+      font-size: 16px;
     }
-    .top-nav-info ul li {
+    .top-nav-info li {
       margin-right: 20px;
       display: flex;
       align-items: center;
-      font-size: 16px;
     }
-    .top-nav-info ul li a {
+    .top-nav-info li a {
       color: #ffffff;
       padding: 5px 10px;
       border-radius: 4px;
       transition: background 0.3s ease;
     }
-    .top-nav-info ul li a:hover {
+    .top-nav-info li a:hover {
       background: rgba(255, 195, 0, 0.4);
     }
     
@@ -121,11 +116,23 @@
       background: rgba(255, 195, 0, 0.4);
     }
     
-    /* Header Top Row: Brand + (Mobile) Toggler / (Desktop) Contact Info */
-    .header-top {
+    /* Toggler Button (always visible on mobile) */
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    
+    /* Header Row: Logo, Contact Info, & Navigation */
+    .header-row {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+    }
+    /* Ensure the navigation (collapse) aligns with the toggler button */
+    .header-row nav {
+      margin-left: 15px;
     }
     
     /* Hero Slider */
@@ -288,8 +295,9 @@
     }
     .footer_section .social_box a img {
       width: 24px;
+      /* Invert images so they show on dark background */
+      filter: brightness(0) invert(1);
     }
-    /* Footer flex container for social icons and copyright */
     .footer_section .footer-content {
       display: flex;
       flex-direction: column;
@@ -327,7 +335,8 @@
   <!-- Header -->
   <header class="header_section">
     <div class="container">
-      <div class="header-top">
+      <div class="header-row">
+        <!-- Logo & Brand -->
         <a class="navbar-brand" href="index.html">
           <img src="Adtim/images/Logo Small.png" alt="Adtim Technologies Logo">
           <div class="brand-text">
@@ -335,55 +344,50 @@
             <h2>TECHNOLOGIES</h2>
           </div>
         </a>
+        <!-- Contact Info (visible on medium and larger screens) -->
+        <ul class="top-nav-info list-unstyled d-none d-md-flex mb-0">
+          <li>
+            <a href="tel:+256704251030">
+              <img src="Adtim/images/telephone.png" alt="Telephone Icon">
+              +256 704 251030
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@adtimtech.com">
+              <img src="Adtim/images/mail.png" alt="Email Icon">
+              support@adtimtech.com
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="Adtim/images/location.png" alt="Location Icon">
+              Kampala-Uganda
+            </a>
+          </li>
+        </ul>
+        <!-- Navigation & Toggler -->
         <div class="d-flex align-items-center">
-          <!-- Top Contact Info visible on md and above -->
-          <div class="top-nav-info d-none d-md-block">
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="tel:+256704251030">
-                  <img src="Adtim/images/telephone.png" alt="Telephone Icon">
-                  +256 704 251030
-                </a>
-              </li>
-              <li>
-                <a href="mailto:support@adtimtech.com">
-                  <img src="Adtim/images/mail.png" alt="Email Icon">
-                  support@adtimtech.com
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="Adtim/images/location.png" alt="Location Icon">
-                  Kampala-Uganda
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- Toggler Button visible only on mobile -->
-          <button class="navbar-toggler d-md-none ml-2" type="button" data-toggle="collapse" data-target="#navbarsMain">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMain">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <nav class="collapse navbar-collapse" id="navbarsMain">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Adtim/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Adtim/services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Adtim/contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-      <!-- Navigation Menu -->
-      <nav class="navbar navbar-expand-md navbar-light">
-        <div class="collapse navbar-collapse" id="navbarsMain">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Adtim/about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Adtim/services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Adtim/contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </div>
   </header>
   
@@ -518,7 +522,7 @@
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
       s1.async=true;
       s1.src='https://embed.tawk.to/67048f1902d78d1a30eddff7/1i9kstv6l';
       s1.charset='UTF-8';
