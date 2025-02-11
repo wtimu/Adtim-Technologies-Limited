@@ -62,16 +62,16 @@
       z-index: 1;
     }
     /* Header Grid Layout:
-       - Left column: Logo (spans two rows)
-       - Right column: Top row = Contact info (desktop) or Toggler (mobile), 
-                        Bottom row = Navigation menu  */
+       - Left cell: Logo (spanning two rows)
+       - Right cell: Top row = Contact info (desktop) or Toggler (mobile),
+                     Bottom row = Navigation menu  */
     .header-grid {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
     }
     .header-logo {
-      /* On medium+ screens, allocate about 25% for logo */
+      /* On large screens, allocate about 25% for the logo */
       flex: 0 0 25%;
       max-width: 25%;
       display: flex;
@@ -168,7 +168,7 @@
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
     
-    /* Other Sections (About, Services, Contact, Footer) remain unchanged */
+    /* Hero Slider */
     .slider_section {
       position: relative;
       background: url('Adtim/images/pexels-photo-2881229.jpeg') no-repeat center center/cover;
@@ -207,6 +207,8 @@
       font-size: 24px;
       font-weight: 700;
     }
+    
+    /* About Section */
     .about_section {
       padding: 60px 0;
       background: #ffffff;
@@ -232,6 +234,11 @@
       background: #FFC300;
       color: #000000;
     }
+    .about-images .img-item {
+      margin-bottom: 15px;
+    }
+    
+    /* Services Section */
     .class_section {
       padding: 60px 0;
       background: #f8f8f8;
@@ -271,6 +278,8 @@
       margin-top: 10px;
       color: #000000;
     }
+    
+    /* Contact Section */
     .contact_section {
       padding: 60px 0;
       background: #ffffff;
@@ -299,6 +308,8 @@
     .contact_section button:hover {
       background: #e6b800;
     }
+    
+    /* Footer Section */
     .footer_section {
       background: #000000;
       color: #ffffff;
@@ -334,12 +345,26 @@
         padding-left: 15px;
       }
     }
+    
+    /* Responsive Adjustments for Mobile */
     @media (max-width: 767.98px) {
       .brand-text h1 {
         font-size: 36px;
       }
       .header-logo img {
         height: 60px;
+      }
+      /* Change header grid layout to vertical so the logo is not overlapped */
+      .header-grid {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+      .header-logo, .header-right {
+         flex: 0 0 100%;
+         max-width: 100%;
+      }
+      .header-right {
+         margin-top: 5px;
       }
       .slider_section {
         min-height: 400px;
@@ -563,3 +588,4 @@
   <!--End of Tawk.to Script-->
 </body>
 </html>
+
