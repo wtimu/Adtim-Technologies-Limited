@@ -380,7 +380,92 @@
   object-fit: cover; /* Ensures the images maintain their aspect ratio */
   display: block;
 }
+/* CTA Section */
+.cta_section {
+  padding: 60px 0;
+  background: #FFC300; /* Yellow/Gold background */
+  color: #000000; /* Black text */
+}
 
+.cta_section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cta_section p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.cta_section .btn {
+  background: #000000; /* Black background */
+  color: #FFC300; /* Yellow/Gold text */
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta_section .btn:hover {
+  background: #ffffff; /* White background on hover */
+  color: #000000; /* Black text on hover */
+}
+
+/* Clients Section */
+.clients_section {
+  padding: 60px 0;
+  background: #ffffff; /* White background */
+  overflow: hidden; /* Hide overflow to prevent horizontal scroll */
+}
+
+.clients_section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFC300; /* Yellow/Gold text */
+  margin-bottom: 20px;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden; /* Hide overflow to prevent horizontal scroll */
+  position: relative;
+}
+
+.group {
+  display: flex;
+  width: max-content; /* Allow the group to expand based on content */
+  will-change: transform; /* Optimize for animation */
+  animation: scrolling 30s linear infinite; /* Slower speed */
+}
+
+.group img {
+  width: 150px; /* Uniform width for all images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 20px; /* Space between logos */
+  object-fit: contain; /* Ensure images fit nicely */
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.group img:hover {
+  transform: scale(1.2); /* Zoom effect on hover */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+/* Pause animation on hover */
+.carousel:hover .group {
+  animation-play-state: paused;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by half the width of the group */
+  }
+}
   </style>
 </head>
 <body>
@@ -548,6 +633,56 @@
     </div>
   </section>
   
+<!-- New CTA Section -->
+<section class="cta_section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h2>Ready to Transform Your IT Infrastructure?</h2>
+        <p>Contact us today to get started.</p>
+      </div>
+      <div class="col-md-4 text-right">
+        <a href="Adtim/contact.html" class="btn">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- New Clients Section -->
+<section class="clients_section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Some of Our Clients</h2>
+    </div>
+    <div class="carousel">
+      <div class="group">
+        <img src="Adtim/images/deposit-protection-fund.png" alt="deposit-protection-fund">
+        <img src="Adtim/images/Jibu.jpg" alt="Jibu">
+        <img src="Adtim/images/lyca.png" alt="lyca">
+        <img src="Adtim/images/NRG.png" alt="NRG">
+        <img src="Adtim/images/OPULSangoBay.png" alt="OPULSangoBay">
+        <img src="Adtim/images/seacom.png" alt="seacom">
+        <img src="Adtim/images/Securex.png" alt="Securex">
+        <img src="Adtim/images/Streit.jpg" alt="Streit">
+        <img src="Adtim/images/Knight Frank.png" alt="Knight">
+        <img src="Adtim/images/Lakeside.png" alt="Lakeside">
+        <!-- Duplicate the images for seamless looping -->
+        <img src="Adtim/images/deposit-protection-fund.png" alt="deposit-protection-fund">
+        <img src="Adtim/images/Jibu.jpg" alt="Jibu">
+        <img src="Adtim/images/lyca.png" alt="lyca">
+        <img src="Adtim/images/NRG.png" alt="NRG">
+        <img src="Adtim/images/OPULSangoBay.png" alt="OPULSangoBay">
+        <img src="Adtim/images/seacom.png" alt="seacom">
+        <img src="Adtim/images/Securex.png" alt="Securex">
+        <img src="Adtim/images/Streit.jpg" alt="Streit">
+        <img src="Adtim/images/Knight Frank.png" alt="Knight">
+        <img src="Adtim/images/Lakeside.png" alt="Lakeside">
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <!-- Contact Section -->
   <section class="contact_section">
     <div class="container">
