@@ -687,15 +687,16 @@
 </section>
 
 
-  <!-- Contact Section -->
-  <section class="contact_section">
+ <!-- Contact Section -->
+<section class="contact_section">
     <div class="container">
       <div class="text-center mb-5">
         <h2>Request A Call Back</h2>
       </div>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form action="PHP/submit_feedback.php" method="post">
+          <!-- Updated Form with Formspree Action and Redirect -->
+          <form action="https://formspree.io/f/mrbeykjp" method="POST">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
             </div>
@@ -708,6 +709,8 @@
             <div class="form-group">
               <textarea class="form-control" placeholder="Message" id="message" name="message" rows="4" required></textarea>
             </div>
+            <!-- Hidden field for redirect -->
+            <input type="hidden" name="_next" value="Adtim/thank-you.html">
             <button type="submit" class="btn btn-block">SEND</button>
           </form>
         </div>
