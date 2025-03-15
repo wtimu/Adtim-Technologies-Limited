@@ -96,3 +96,13 @@
     initMobileMenu();
   });
 })();
+
+// Old js starts here
+
+    function myMap() {
+      var mapProp = {
+        center: new google.maps.LatLng(0.347596, 32.582520),
+        zoom: 15,
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
