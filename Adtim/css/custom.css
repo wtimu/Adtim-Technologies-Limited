@@ -988,37 +988,7 @@ body.menu-open {
       margin-top: 15px;
     }
     
-    /* ------------------ Info Section (Contact Form & Map) ------------------ */
-    .info_section {
-      padding: 60px 0;
-      background: #f8f8f8;
-    }
-    .info_section .contact_section h2 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #FFC300;
-      margin-bottom: 20px;
-    }
-    .info_section .contact_section form input,
-    .info_section .contact_section form .message-box {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-    .info_section .contact_section form button {
-      background: #FFC300;
-      border: none;
-      padding: 12px;
-      border-radius: 25px;
-      color: #000;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    .info_section .contact_section form button:hover {
-      background: #e6b800;
-    }
+   
     
     /* ------------------ Footer Section ------------------ */
     .footer_section {
