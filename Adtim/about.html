@@ -16,74 +16,89 @@
 </head>
 <body>
   <!-- Header Section -->
-  <header class="header_section">
-    <div class="container">
-      <div class="header-grid">
-        <!-- Left Cell: Logo (spanning both rows) -->
-        <div class="header-logo">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/Logo Small.png" alt="Adtim Technologies Logo" />
-            <div class="brand-text">
-              <h1>ADTIM</h1>
-              <h2>TECHNOLOGIES</h2>
-            </div>
-          </a>
-        </div>
-        <!-- Right Cell: Two Rows (Top: Contact Info / Mobile Toggler, Bottom: Navigation Menu) -->
-        <div class="header-right">
-          <!-- Top Row: Desktop Contact Info or Mobile Toggler -->
-          <div class="header-top">
-            <div class="top-nav-info d-none d-md-block">
-              <ul class="list-inline mb-0">
-                <li class="list-inline-item">
-                  <a href="tel:+256704251030">
-                    <img src="images/telephone.png" alt="Telephone Icon" /> +256 704 251030
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="mailto:support@adtimtech.com">
-                    <img src="images/mail.png" alt="Email Icon" /> support@adtimtech.com
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#">
-                    <img src="images/location.png" alt="Location Icon" /> Kampala-Uganda
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- Mobile: Display toggler button -->
-            <div class="mobile-toggler d-block d-md-none text-right">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMain">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
+   <!-- Mobile Menu -->
+  <button class="mobile-toggler d-lg-none">
+    <span class="toggler-bar"></span>
+    <span class="toggler-bar"></span>
+    <span class="toggler-bar"></span>
+  </button>
+
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <img src="images/white logo-01.png" alt="Logo" class="mobile-logo">
+        <button class="close-menu">&times;</button>
+      </div>
+      <ul class="mobile-nav">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <a href="contact.html" class="cta-button">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="hero-header">
+    <nav class="nav-wrapper">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-3">
+          <!-- Logo -->
+          <div class="header-logo">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/white logo-01.png" alt="Adtim Technologies Logo">
+              <div class="brand-text">
+                <h1>ADTIM</h1>
+                <h2>TECHNOLOGIES</h2>
+              </div>
+            </a>
           </div>
-          <!-- Bottom Row: Navigation Menu -->
-          <div class="header-menu">
-            <nav class="navbar navbar-expand-md navbar-light px-0">
-              <div class="collapse navbar-collapse" id="navbarsMain">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+
+          <!-- Navigation -->
+          <div class="header-right">
+            <div class="header-top">
+              <div class="top-nav-info d-none d-md-block">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="tel:+256704251030">
+                      <img src="images/telephone.png" alt="Telephone"> +256 704 251030
+                    </a>
                   </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="about.html">About</a>
+                  <li class="list-inline-item">
+                    <a href="mailto:support@adtimtech.com">
+                      <img src="images/mail.png" alt="Email"> support@adtimtech.com
+                    </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="services.html">Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <img src="images/location.png" alt="Location"> Kampala-Uganda
+                    </a>
                   </li>
                 </ul>
               </div>
-            </nav>
+            </div>
+
+            <div class="header-menu">
+              <nav class="navbar navbar-expand-md navbar-light px-0">
+                <div class="collapse navbar-collapse" id="navbarsMain">
+                  
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                  </ul>
+                  <a href="contact.html" class="cta-button">Get a Quote</a>
+                </div>
+              </nav>
+            </div>
           </div>
-        </div><!-- /.header-right -->
-      </div><!-- /.header-grid -->
-    </div>
-  </header>
+        </div>
+      </div>
+    </nav>
   
   <!-- About Section -->
   <section class="about_section layout_padding">
