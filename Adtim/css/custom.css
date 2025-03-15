@@ -18,7 +18,7 @@ body::before {
   width: 100%;
   height: 99.9%;
   z-index: -1;
-  background: url('https://images.pexels.com/photos/5213883/pexels-photo-5213883.jpeg');
+  background: url('images/servers.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,7 +59,7 @@ body::before {
 }
 
 .nav-wrapper.scrolled {
-  background: url("https://t3.ftcdn.net/jpg/02/98/55/92/360_F_298559228_qAu46P4ahX5oneA6pNIkATQhXIXmoRRU.jpg") no-repeat center center/cover;
+  background: url('images/servers.jpg') no-repeat center center/cover;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
