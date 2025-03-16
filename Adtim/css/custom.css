@@ -161,7 +161,13 @@ body::before {
   color: var(--text-light);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Adjust styles for tablets */
+    .container {
+        width: 90%; /* Avoid full-width issues */
+        max-width: 900px; /* Prevent stretching */
+    }
+} {
   .hero-title {
     font-size: 2rem;
   }
