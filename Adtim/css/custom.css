@@ -944,13 +944,7 @@ body.menu-open {
 /* Old css starts here, remove if it causes trouble*/ 
 
     /* Global Styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #FFC300; /* Yellow/Gold */
-      color: #000;
-      margin: 0;
-      padding: 0;
-      /* Enough top padding to account for the fixed header */
+    
       padding-top: 130px;
     }
     a {
@@ -994,23 +988,4 @@ body.menu-open {
       margin-top: 15px;
     }
     
-   
-    
-    /* ------------------ Footer Section ------------------ */
-    .footer_section {
-      background: #000;
-      color: #fff;
-      padding: 15px 0;
-      text-align: center;
-    }
-    .footer_section .social_box a {
-      margin-right: 15px;
-    }
-    .footer_section .social_box a img {
-      width: 24px;
-      filter: brightness(0) invert(1);
-    }
-    .footer_section p {
-      margin-top: 10px;
-    }
  
