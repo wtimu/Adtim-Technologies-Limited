@@ -1899,7 +1899,7 @@ textarea.form-control {
     /* Mobile adjustments */
     @media (max-width: 768px) {
       body {
-        padding-top: 70px;
+        padding-top: 0px;
       }
       
       .category-tab,
