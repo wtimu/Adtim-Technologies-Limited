@@ -1896,11 +1896,7 @@ textarea.form-control {
       color: white;
     }
     
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-      body {
-        padding-top: 0px;
-      }
+    
       
       .category-tab,
       .gallery-tab {
