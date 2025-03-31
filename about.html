@@ -42,16 +42,23 @@
     </div>
   </div>
 
-  <!-- Navigation (Same as index) -->
-  <nav class="navbar">
+   <!-- Main Navigation -->
+  <nav class="navbar" id="main-nav">
     <div class="container nav-container">
       <a href="index.html" class="logo">
         <img src="images/Logo Small.png" alt="Adtim Technologies Logo" class="logo">
       </a>
+      
       <ul class="nav-menu">
         <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="active">About</a></li>
-        <li class="nav-item"><a href="services.html">Services</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item dropdown">
+          <a href="services.html" class="active">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="services.html#services">All Services</a>
+            <a href="services.html#gallery">Project Gallery</a>
+          </div>
+        </li>
         <li class="nav-item"><a href="contact.html">Contact</a></li>
         <li class="nav-item"><a href="#contact" class="btn btn-secondary nav-cta">Get In Touch</a></li>
       </ul>
