@@ -14,11 +14,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="css/try2.css">
-		
-  
+
 </head>
 <body>
-  <!-- Top Contact Bar (Same as index) -->
+  <!-- Top Contact Bar -->
   <div class="top-contact-bar">
     <div class="container contact-container">
       <div class="social-links">
@@ -44,17 +43,23 @@
     </div>
   </div>
 
-  <!-- Navigation (Same as index) -->
-  <nav class="navbar">
+  <!-- Main Navigation -->
+  <nav class="navbar" id="main-nav">
     <div class="container nav-container">
       <a href="index.html" class="logo">
         <img src="images/Logo Small.png" alt="Adtim Technologies Logo" class="logo">
       </a>
-		
+      
       <ul class="nav-menu">
         <li class="nav-item"><a href="index.html">Home</a></li>
         <li class="nav-item"><a href="about.html">About</a></li>
-        <li class="nav-item"><a href="services.html" class="active">Services</a></li>
+        <li class="nav-item dropdown">
+          <a href="services.html" class="active">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="services.html#services">All Services</a>
+            <a href="services.html#gallery">Project Gallery</a>
+          </div>
+        </li>
         <li class="nav-item"><a href="contact.html">Contact</a></li>
         <li class="nav-item"><a href="#contact" class="btn btn-secondary nav-cta">Get In Touch</a></li>
       </ul>
@@ -66,6 +71,32 @@
     </div>
   </nav>
 
+  <!-- Sticky Header Replacement - Services Selector -->
+  <div class="sticky-header-replacement services-selector" id="services-selector">
+    <div class="container">
+      <div class="category-tabs">
+        <div class="category-tab active" data-category="all">All Services</div>
+        <div class="category-tab" data-category="security">Security Solutions</div>
+        <div class="category-tab" data-category="network">Network Services</div>
+        <div class="category-tab" data-category="it">IT Infrastructure</div>
+        <div class="category-tab" data-category="gallery" onclick="location.href='#gallery'">Project Gallery</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header Replacement - Gallery Selector -->
+  <div class="sticky-header-replacement gallery-selector" id="gallery-selector">
+    <div class="container">
+      <div class="gallery-tabs">
+        <div class="gallery-tab active" data-gallery-category="all">All Projects</div>
+        <div class="gallery-tab" data-gallery-category="security">Security Solutions</div>
+        <div class="gallery-tab" data-gallery-category="network">Network Services</div>
+        <div class="gallery-tab" data-gallery-category="it">IT Infrastructure</div>
+        <div class="gallery-tab" onclick="location.href='#services'">Back to Services</div>
+      </div>
+    </div>
+  </div>
+
   <!-- Services Hero Section -->
   <section class="services-hero">
     <div class="container">
@@ -75,17 +106,8 @@
     </div>
   </section>
 
-  <!-- Service Categories -->
-  <section class="service-categories">
-    <div class="container">
-      <div class="category-tabs">
-        <div class="category-tab active" data-category="all">All Services</div>
-        <div class="category-tab" data-category="security">Security Solutions</div>
-        <div class="category-tab" data-category="network">Network Services</div>
-        <div class="category-tab" data-category="it">IT Infrastructure</div>
-      </div>
-    </div>
-  </section>
+  <!-- Service Categories Anchor -->
+  <div id="services"></div>
 
   <!-- Main Services Section -->
   <section class="section">
@@ -231,30 +253,114 @@
     </div>
   </section>
 
-  <!-- Contact Section (Same as index) -->
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Project Gallery</h2>
+        <p>Explore our completed projects across different service categories</p>
+      </div>
+      
+      <div class="gallery-grid">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item" data-gallery-category="security">
+          <img src="images/cctv-installation.jpg" alt="CCTV Installation Project">
+          <div class="gallery-caption">
+            <h4>CCTV Installation</h4>
+            <p>Commercial building surveillance system with 32 cameras</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item" data-gallery-category="security">
+          <img src="images/access-control-project.jpg" alt="Access Control Project">
+          <div class="gallery-caption">
+            <h4>Access Control System</h4>
+            <p>Biometric entry system for corporate headquarters</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item" data-gallery-category="network">
+          <img src="images/network-cabling.jpg" alt="Network Cabling Project">
+          <div class="gallery-caption">
+            <h4>Structured Cabling</h4>
+            <p>Office building network infrastructure</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item" data-gallery-category="it">
+          <img src="images/server-room.jpg" alt="Server Room Project">
+          <div class="gallery-caption">
+            <h4>Data Center Setup</h4>
+            <p>Enterprise server room with cooling and UPS</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 5 -->
+        <div class="gallery-item" data-gallery-category="network">
+          <img src="images/wifi-installation.jpg" alt="WiFi Installation Project">
+          <div class="gallery-caption">
+            <h4>Enterprise WiFi</h4>
+            <p>High-density wireless network for university campus</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 6 -->
+        <div class="gallery-item" data-gallery-category="security">
+          <img src="images/alarm-system.jpg" alt="Alarm System Project">
+          <div class="gallery-caption">
+            <h4>Intrusion Detection</h4>
+            <p>Perimeter security for industrial facility</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 7 -->
+        <div class="gallery-item" data-gallery-category="it">
+          <img src="images/ups-installation.jpg" alt="UPS Installation Project">
+          <div class="gallery-caption">
+            <h4>Power Backup System</h4>
+            <p>Redundant UPS for hospital critical systems</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 8 -->
+        <div class="gallery-item" data-gallery-category="network">
+          <img src="images/fiber-optic.jpg" alt="Fiber Optic Project">
+          <div class="gallery-caption">
+            <h4>Fiber Optic Network</h4>
+            <p>High-speed connectivity between office buildings</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section class="section contact" id="contact">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-form">
           <h2>Request A Call Back</h2>
           <form action="https://formspree.io/f/mrbeykjp" method="POST">
-        <div class="form-group">
-          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" id="message" name="message" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">
-          <span>Send Message</span>
-          <i class="fas fa-paper-plane"></i>
-        </button>
-      </form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
         </div>
         <div class="contact-info">
           <h3>Why Choose Us?</h3>
@@ -293,7 +399,7 @@
     </div>
   </section>
 
-  <!-- Footer (Same as index) -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -315,6 +421,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="services.html#gallery">Project Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
@@ -334,24 +441,11 @@
     </div>
   </footer>
 
-  <!-- Scripts (Same as index with additional services filtering) -->
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-	<script src="js/try2.js"></script>
+  <script src="js/try2.js"></script>
   <script src="js/services-filter.js"></script>
-	</script>
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/67048f1902d78d1a30eddff7/1i9kstv6l';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-  <!--End of Tawk.to Script-->
+
 </body>
 </html>
