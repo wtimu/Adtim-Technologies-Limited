@@ -190,3 +190,92 @@ $(document).ready(function(){
     }
   });
 });
+ // Header replacement system with all original functionality
+    $(document).ready(function() {
+      // Original services filtering
+      $('.category-tab').click(function() {
+        $('.category-tab').removeClass('active');
+        $(this).addClass('active');
+        
+        const category = $(this).data('category');
+        $('.service-card').hide();
+        if (category === 'all') {
+          $('.service-card').show();
+        } else {
+          $(`.service-card[data-category="${category}"]`).show();
+        }
+      });
+      
+      // Gallery filtering
+      $('.gallery-tab').click(function() {
+        $('.gallery-tab').removeClass('active');
+        $(this).addClass('active');
+        
+        const category = $(this).data('gallery-category');
+        $('.gallery-item').hide();
+        if (category === 'all') {
+          $('.gallery-item').show();
+        } else {
+          $(`.gallery-item[data-gallery-category="${category}"]`).show();
+        }
+      });
+      
+      // Header replacement logic
+      const mainNav = $('#main-nav');
+      const servicesSelector = $('#services-selector');
+      const gallerySelector = $('#gallery-selector');
+      
+      function calculateOffsets() {
+        const servicesOffset = $('#services').offset().top - 80;
+        const galleryOffset = $('#gallery').offset().top - 80;
+        return { servicesOffset, galleryOffset };
+      }
+      
+      let { servicesOffset, galleryOffset } = calculateOffsets();
+      
+      $(window).resize(function() {
+        ({ servicesOffset, galleryOffset } = calculateOffsets());
+      });
+      
+      $(window).scroll(function() {
+        const scrollPos = $(window).scrollTop();
+        
+        if (scrollPos >= galleryOffset) {
+          mainNav.css('transform', 'translateY(-100%)');
+          servicesSelector.removeClass('visible');
+          gallerySelector.addClass('visible');
+        } 
+        else if (scrollPos >= servicesOffset) {
+          mainNav.css('transform', 'translateY(-100%)');
+          servicesSelector.addClass('visible');
+          gallerySelector.removeClass('visible');
+        } 
+        else {
+          mainNav.css('transform', 'translateY(0)');
+          servicesSelector.removeClass('visible');
+          gallerySelector.removeClass('visible');
+        }
+      });
+      
+      // Smooth scrolling
+      $('a[href*="#"]').not('[href="#"]').on('click', function(e) {
+        if (this.hash !== '') {
+          e.preventDefault();
+          const hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top - 80
+          }, 800, function() {
+            window.location.hash = hash;
+          });
+        }
+      });
+      
+      // Initialize based on hash
+      if (window.location.hash === '#gallery') {
+        $('html, body').scrollTop(galleryOffset + 80);
+        $('.gallery-tab[data-gallery-category="all"]').click();
+      } else if (window.location.hash === '#services') {
+        $('html, body').scrollTop(servicesOffset + 80);
+        $('.category-tab[data-category="all"]').click();
+      }
+    });
