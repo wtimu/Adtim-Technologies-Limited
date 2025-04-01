@@ -1917,7 +1917,7 @@ textarea.form-control {
     /* Rest of your original styles */
     .gallery-section {
       padding: 60px 0;
-      background-color: var(--secondary);
+      background-color: var(--primary);
     }
     
     .gallery-grid {
@@ -1956,7 +1956,9 @@ textarea.form-control {
       transform: translateY(100%);
       transition: transform 0.3s ease;
     }
-    
+    .gallery-caption h4 {
+	color: var(--secondary)
+}
     .gallery-item:hover .gallery-caption {
       transform: translateY(0);
     }
