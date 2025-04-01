@@ -1917,7 +1917,7 @@ textarea.form-control {
     /* Rest of your original styles */
     .gallery-section {
       padding: 60px 0;
-      background-color: var(--bg-light);
+      background-color: var(--light);
     }
     
     .gallery-grid {
