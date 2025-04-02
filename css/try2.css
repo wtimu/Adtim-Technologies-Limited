@@ -2007,7 +2007,7 @@ textarea.form-control {
 .logo-slider .logo-track {
   display: flex;
   width: max-content;
-  animation: scroll 10s linear infinite;
+  animation: scroll 50s linear infinite;
 }
 
 /* Individual logo styling */
