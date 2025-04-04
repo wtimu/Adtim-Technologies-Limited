@@ -556,7 +556,7 @@ img {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   margin: 15px;
-	height: 450px;
+	height: 450px !important;
 }
 
 .service-card:hover {
@@ -605,6 +605,7 @@ img {
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
+	bottom: 0 !important;
 }
 
 .service-link i {
