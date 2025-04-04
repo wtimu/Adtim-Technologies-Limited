@@ -647,52 +647,7 @@ img {
   color: #fff;
 }
 
-/* Clients Section */
-.clients {
-  background-color: white;
-  overflow: hidden;
-}
 
-.clients-slider {
-  display: flex;
-  width: 100%;
-  padding: 40px 0;
-  overflow: hidden;
-  height: 100%;
-}
-
-.client-logo {
-  width: 200px;
-  height: 120px;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  margin: 0 10px;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: all 0.3s;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  background: white;
-}
-
-.client-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.client-logo img {
-  max-height: 80px;
-  max-width: 160px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  transition: all 0.3s;
-}
 
 /* Contact Section */
 .contact {
@@ -1993,6 +1948,31 @@ textarea.form-control {
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+/* Clients Section */
+.clients {
+  background-color: white;
+  overflow: hidden;
+}
+
+.clients-slider {
+  display: flex;
+  width: 100%;
+  padding: 40px 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
 /* Container for the scrolling logos */
 .logo-slider {
   overflow: hidden;
@@ -2012,13 +1992,29 @@ textarea.form-control {
 
 /* Individual logo styling */
 .client-logo {
-  display: inline-block;
   margin: 0 20px;
+width: 200px;
+  height: 120px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: white;
 }
 
 .client-logo img {
   max-height: 100px;
   max-width: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s;
 }
 
 /* Keyframes for infinite scrolling animation */
