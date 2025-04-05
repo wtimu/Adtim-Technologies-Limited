@@ -2285,9 +2285,9 @@ body {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  width: 100%;
-  background: #f8f8f8;
+  width: 100vw; /* Viewport width */
   padding: 20px 0;
+  margin-left: calc(-50vw + 50%); /* Pull it out of container */
 }
 
 /* Wrapper for the logos */
