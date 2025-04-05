@@ -704,6 +704,7 @@ textarea.form-control {
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
+	color: var(--bg-light);
 }
 
 .footer-links h3::after, .footer-contact h3::after {
