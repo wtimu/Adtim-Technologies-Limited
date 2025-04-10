@@ -1336,16 +1336,6 @@ textarea.form-control {
     z-index: 1002;
   }
 }
-:root {
-  --primary: #0A1629;    /* Dark blue */
-  --secondary: #E3A82E;  /* Gold */
-  --accent: #008080;     /* Teal */
-  --light: #FAF1E2;      /* Cream */
-  --dark: #2E2E2E;       /* Dark gray */
-  --text: #6c757d;      /* Medium gray */
-  --bg-light: #E5E5E5;   /* Light gray */
-}
-
 /* Mobile Menu - Fixed Solution */
 .navbar {
   position: sticky;
@@ -1489,31 +1479,6 @@ textarea.form-control {
     width: 100%;
   }
 }
-:root {
-  --primary: #0A1629;    /* Dark blue */
-  --secondary: #E3A82E;  /* Gold */
-  --accent: #008080;     /* Teal */
-  --light: #FAF1E2;      /* Cream */
-  --dark: #2E2E2E;       /* Dark gray */
-  --text: #6c757d;      /* Medium gray */
-  --bg-light: #E5E5E5;   /* Light gray */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: var(--dark);
-  background-color: white;
-  overflow-x: hidden;
-}
-
-/* ... (keep all your existing styles until the Services Section) ... */
 
 /* Services Section - Index Page */
 .services-slider {
