@@ -227,6 +227,7 @@ img {
   display: flex;
   list-style: none;
   gap: 30px;
+align-items: center;
 }
 
 .nav-item a {
