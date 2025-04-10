@@ -255,41 +255,35 @@ img {
   width: 100%;
 }
 
-/* Updated Navigation CTA Button */
-.nav-cta {
- margin-left: 40px;
-  padding: 0.75rem 1.75rem;
-  border-radius: 4px;
-  background-color: var(--primary);
-  color: var(--light) !important;
-  border: 1px solid var(--primary);
-  transition: all 0.3s ease;
-  font-weight: 600;
-  position: relative;
-  overflow: hidden; /* Ensures the reflection stays within button bounds */
-}
-/* Light reflection element */
-.nav-cta::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transform: skewX(-25deg);
-  transition: none; /* We'll control this with animation */
-}
+/* Navigation CTA Button */
 
-/* Animation on hover */
-.nav-cta:hover::after {
-  animation: lightReflection 1.5s ease;
-}
+ .nav-cta {
+   display: inline-block;
+   padding: 0.5em 1.2em !important;
+   background: linear-gradient(135deg, var(--bg-light), var(--light));
+   color: #fff;
+   font-weight: 600;
+   border-radius: 10px;
+   text-decoration: none;
+   transition: all 0.3s ease;
+   box-shadow: 0 5px 10px var(--text);
+ }
+ 
+ .nav-cta:hover {
+   background: linear-gradient(135deg,var(--dark), var(--text));
+   box-shadow: 0 6px 16px var(--dark);
+   transform: translateY(-2px);
+   color: var(--light) !important;
+ }
+ 
+ .nav-cta:active {
+   transform: scale(0.98);
+   box-shadow: 0 3px 6px rgba(59, 130, 246, 0.4);
+ }
+ .nav-item a.nav-cta::after {
+   content: none !important;
+ }
+ 
 
 @keyframes lightReflection {
   0% {
@@ -301,21 +295,6 @@ img {
   100% {
     left: 100%;
   }
-}
-
-/* Optional: Add a slight scale effect to make it more dynamic */
-
-
-.nav-cta:hover {
-  background-color: #040e1d;
-  color: white;
-  box-shadow: 0 4px 8px rgba(10, 22, 41, 0.2);
-  transform: translateY(-2px) scale(1.02);
-}
-
-
-.nav-item .nav-cta::after {
-  display: none;
 }
 
 .hamburger {
