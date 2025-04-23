@@ -219,3 +219,81 @@ document.addEventListener('DOMContentLoaded', function() {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
   });
 });
+
+//PopUp contact Modal functions
+function showModal() {
+  const modal = document.getElementById('contactModal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+}
+
+function closeModal() {
+  const modal = document.getElementById('contactModal');
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+// Initialize modal after 7 seconds
+window.addEventListener('load', function() {
+  setTimeout(showModal, 7000);
+});
+
+// Close modal when clicking outside content
+document.addEventListener('click', function(e) {
+  const modal = document.getElementById('contactModal');
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+// Handle both inline and modal form submissions
+document.addEventListener('DOMContentLoaded', function() {
+  // Generic form handler function
+  const handleFormSubmit = async (form) => {
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalHTML = submitButton.innerHTML;
+    
+    // Visual feedback
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitButton.disabled = true;
+    
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      if (!response.ok) throw new Error('Submission failed');
+      
+      alert('Message sent successfully!');
+      form.reset();
+      closeModal(); // Close modal after successful submission
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      submitButton.innerHTML = originalHTML;
+      submitButton.disabled = false;
+    }
+  };
+
+  // Attach to inline form
+  const inlineForm = document.querySelector('.contact-form form');
+  if (inlineForm) {
+    inlineForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleFormSubmit(inlineForm);
+    });
+  }
+
+  // Attach to modal form
+  const modalForm = document.querySelector('#contactModal form');
+  if (modalForm) {
+    modalForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleFormSubmit(modalForm);
+    });
+  }
+});
+
